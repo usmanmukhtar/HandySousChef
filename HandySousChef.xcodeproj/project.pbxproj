@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		163753A6243496E500B417D5 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163753A5243496E500B417D5 /* PageControl.swift */; };
 		163753AA2434A71400B417D5 /* RecipieSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163753A92434A71400B417D5 /* RecipieSuggest.swift */; };
+		163753AC2434E38A00B417D5 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163753AB2434E38A00B417D5 /* ArticleView.swift */; };
 		16DDFE7C2431EE66004BE4BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFE7B2431EE66004BE4BD /* AppDelegate.swift */; };
 		16DDFE7E2431EE66004BE4BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFE7D2431EE66004BE4BD /* SceneDelegate.swift */; };
 		16DDFE802431EE66004BE4BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFE7F2431EE66004BE4BD /* ContentView.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		163753A5243496E500B417D5 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		163753A92434A71400B417D5 /* RecipieSuggest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieSuggest.swift; sourceTree = "<group>"; };
+		163753AB2434E38A00B417D5 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		16DDFE782431EE66004BE4BD /* HandySousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandySousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DDFE7B2431EE66004BE4BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16DDFE7D2431EE66004BE4BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				16DDFE832431EE67004BE4BD /* Preview Content */,
 				16DDFEAB24323C91004BE4BD /* MealSelect.swift */,
 				163753A92434A71400B417D5 /* RecipieSuggest.swift */,
+				163753AB2434E38A00B417D5 /* ArticleView.swift */,
 			);
 			path = HandySousChef;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				16DDFE7C2431EE66004BE4BD /* AppDelegate.swift in Sources */,
 				16DDFE7E2431EE66004BE4BD /* SceneDelegate.swift in Sources */,
 				16DDFEAC24323C92004BE4BD /* MealSelect.swift in Sources */,
+				163753AC2434E38A00B417D5 /* ArticleView.swift in Sources */,
 				16DDFE802431EE66004BE4BD /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
