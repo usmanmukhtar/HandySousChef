@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HandySousChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6M-dM-85D">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sog-ea-uOB">
+                                        <rect key="frame" x="24" y="100" width="327" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="tjO-la-4XV"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Select Meal Time">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="ArialRoundedMTBold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-hd-jsB">
+                                        <rect key="frame" x="0.0" y="223" width="375" height="444"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ISN-k6-V1i">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="BRY-Au-hTC" customClass="MealCollectionViewCell" customModule="HandySousChef" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bco-xG-YEn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Pgy-FI-aOr"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="HI2-pt-ZHc"/>
+                                        </connections>
+                                    </collectionView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="UBk-d5-Yxj">
+                                        <rect key="frame" x="20" y="697" width="335" height="37"/>
+                                        <subviews>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uUA-2M-V9P">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="37"/>
+                                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="currentPageIndicatorTintColor" red="0.8980392157" green="0.56862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </pageControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-XH-j9M">
+                                                <rect key="frame" x="303" y="0.0" width="32" height="37"/>
+                                                <state key="normal" title="Next"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="748-nb-lX2">
+                                        <rect key="frame" x="0.0" y="312" width="375" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBr-3f-dRW">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="110"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <state key="normal" title="&lt;">
+                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KxZ-yF-JLK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GH-9H-Lgd">
+                                                <rect key="frame" x="345" y="0.0" width="30" height="110"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <state key="normal" title="&gt;">
+                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sQl-6P-Bx3"/>
+                                                    <action selector="btnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUc-Fy-nKV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="748-nb-lX2" firstAttribute="centerX" secondItem="I6M-dM-85D" secondAttribute="centerX" id="1W6-B5-oZT"/>
+                                    <constraint firstItem="748-nb-lX2" firstAttribute="centerY" secondItem="I6M-dM-85D" secondAttribute="centerY" id="LFH-Ur-4aY"/>
+                                    <constraint firstItem="sog-ea-uOB" firstAttribute="leading" secondItem="I6M-dM-85D" secondAttribute="leading" constant="24" id="Smz-8w-KYh"/>
+                                    <constraint firstItem="748-nb-lX2" firstAttribute="top" secondItem="I6M-dM-85D" secondAttribute="top" constant="312" id="T95-wa-Q0c"/>
+                                    <constraint firstItem="748-nb-lX2" firstAttribute="leading" secondItem="I6M-dM-85D" secondAttribute="leading" id="TXa-Fj-H0n"/>
+                                    <constraint firstItem="2Cb-hd-jsB" firstAttribute="top" secondItem="sog-ea-uOB" secondAttribute="bottom" constant="80" id="XF3-R9-goq"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Cb-hd-jsB" secondAttribute="trailing" id="b7v-q9-592"/>
+                                    <constraint firstAttribute="trailing" secondItem="sog-ea-uOB" secondAttribute="trailing" constant="24" id="eQw-Sm-duy"/>
+                                    <constraint firstItem="2Cb-hd-jsB" firstAttribute="leading" secondItem="I6M-dM-85D" secondAttribute="leading" id="iVe-Wv-8Wd"/>
+                                    <constraint firstItem="sog-ea-uOB" firstAttribute="top" secondItem="I6M-dM-85D" secondAttribute="top" constant="100" id="jIs-2f-33g"/>
+                                    <constraint firstItem="UBk-d5-Yxj" firstAttribute="top" secondItem="2Cb-hd-jsB" secondAttribute="bottom" constant="30" id="sQ7-AI-PQ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="748-nb-lX2" secondAttribute="trailing" id="zBX-O7-NMS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UBk-d5-Yxj" secondAttribute="trailing" constant="20" id="GKK-lV-5tK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UBk-d5-Yxj" secondAttribute="bottom" id="GN2-Fq-151"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I6M-dM-85D" secondAttribute="bottom" id="c0u-oR-L3a"/>
+                            <constraint firstItem="UBk-d5-Yxj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qJD-0w-55u"/>
+                            <constraint firstItem="I6M-dM-85D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rIU-DD-kgE"/>
+                            <constraint firstItem="I6M-dM-85D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tZ9-sg-Ias"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I6M-dM-85D" secondAttribute="trailing" id="vdC-7X-bV2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collView" destination="2Cb-hd-jsB" id="W1Y-tx-D3O"/>
+                        <outlet property="pageControl" destination="uUA-2M-V9P" id="bWx-yV-1MH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58" y="137"/>
+        </scene>
+        <!--Swipping Controller-->
+        <scene sceneID="u1N-qJ-RlL">
+            <objects>
+                <collectionViewController id="5mB-j3-rWR" customClass="SwippingController" customModule="HandySousChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="G7D-xT-DnA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hOe-Jp-ACf">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4RR-AO-Bqd">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QOg-wh-2CQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="5mB-j3-rWR" id="U3Q-H7-qsQ"/>
+                            <outlet property="delegate" destination="5mB-j3-rWR" id="K4e-cN-A31"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="collView" destination="G7D-xT-DnA" id="c1G-Kp-vki"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Glz-iK-eAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="137"/>
+        </scene>
+    </scenes>
+</document>

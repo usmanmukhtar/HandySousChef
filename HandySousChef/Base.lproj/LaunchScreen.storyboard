@@ -15,40 +15,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basil-delicious-food-ingredients-459469" translatesAutoresizingMaskIntoConstraints="NO" id="qKJ-Wh-CiE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="WLs-Vg-PcU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ErT-IV-FHr">
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rt1-zC-TzE">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handy Sous Chef" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9X-ne-8FT">
-                                <rect key="frame" x="40.5" y="144" width="333" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handy Sous Chef" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkB-Ig-r1t">
+                                <rect key="frame" x="40.5" y="144" width="333" height="46.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooking made easy!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-BO-HQ3">
-                                <rect key="frame" x="75.5" y="192" width="263" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We tell you what to cook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPx-8b-P6u">
+                                <rect key="frame" x="71.5" y="210.5" width="271" height="27"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="f9X-ne-8FT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="48t-89-3ic"/>
-                            <constraint firstItem="qKJ-Wh-CiE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="BSr-n7-TTS"/>
-                            <constraint firstAttribute="bottom" secondItem="qKJ-Wh-CiE" secondAttribute="bottom" id="EZQ-wi-iCS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qKJ-Wh-CiE" secondAttribute="trailing" id="GHz-6W-cYg"/>
-                            <constraint firstItem="ErT-IV-FHr" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="RA8-bd-hLb"/>
-                            <constraint firstItem="ErT-IV-FHr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XIz-Jp-ELr"/>
-                            <constraint firstItem="ErT-IV-FHr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g87-eT-XY2"/>
-                            <constraint firstItem="f9X-ne-8FT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iEX-bh-TJV"/>
-                            <constraint firstItem="qKJ-Wh-CiE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qKX-qM-rJb"/>
-                            <constraint firstItem="gaY-BO-HQ3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="szp-NY-8OB"/>
-                            <constraint firstAttribute="bottom" secondItem="ErT-IV-FHr" secondAttribute="bottom" id="tJo-re-uTh"/>
-                            <constraint firstItem="gaY-BO-HQ3" firstAttribute="top" secondItem="f9X-ne-8FT" secondAttribute="bottom" id="zMF-x3-seA"/>
+                            <constraint firstItem="WLs-Vg-PcU" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="164-GL-6dw"/>
+                            <constraint firstAttribute="bottom" secondItem="WLs-Vg-PcU" secondAttribute="bottom" id="7tn-fs-e7C"/>
+                            <constraint firstItem="WLs-Vg-PcU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KVq-wT-Yi7"/>
+                            <constraint firstItem="rt1-zC-TzE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Sud-yT-Dep"/>
+                            <constraint firstItem="WPx-8b-P6u" firstAttribute="top" secondItem="nkB-Ig-r1t" secondAttribute="bottom" constant="20" id="aev-CC-QDt"/>
+                            <constraint firstItem="rt1-zC-TzE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d53-R8-Nzd"/>
+                            <constraint firstItem="nkB-Ig-r1t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="jin-JZ-qx7"/>
+                            <constraint firstItem="rt1-zC-TzE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kc0-nb-PfJ"/>
+                            <constraint firstItem="WLs-Vg-PcU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pEW-V0-ZGU"/>
+                            <constraint firstItem="nkB-Ig-r1t" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vZl-hW-pRK"/>
+                            <constraint firstAttribute="bottom" secondItem="rt1-zC-TzE" secondAttribute="bottom" id="vhs-ld-2M6"/>
+                            <constraint firstItem="WPx-8b-P6u" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xqf-0H-pMf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -59,6 +59,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="basil-delicious-food-ingredients-459469" width="4919" height="3195"/>
+        <image name="LaunchScreen" width="4919" height="3195"/>
     </resources>
 </document>

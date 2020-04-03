@@ -1,0 +1,6 @@
+framework module Pods_HandySousChef_HandySousChefUITests {
+  umbrella header "Pods-HandySousChef-HandySousChefUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

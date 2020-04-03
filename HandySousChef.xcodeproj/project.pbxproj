@@ -3,161 +3,219 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		163753A6243496E500B417D5 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163753A5243496E500B417D5 /* PageControl.swift */; };
-		163753AA2434A71400B417D5 /* RecipieSuggest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163753A92434A71400B417D5 /* RecipieSuggest.swift */; };
-		163753AC2434E38A00B417D5 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163753AB2434E38A00B417D5 /* ArticleView.swift */; };
-		16DDFE7C2431EE66004BE4BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFE7B2431EE66004BE4BD /* AppDelegate.swift */; };
-		16DDFE7E2431EE66004BE4BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFE7D2431EE66004BE4BD /* SceneDelegate.swift */; };
-		16DDFE802431EE66004BE4BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFE7F2431EE66004BE4BD /* ContentView.swift */; };
-		16DDFE822431EE67004BE4BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DDFE812431EE67004BE4BD /* Assets.xcassets */; };
-		16DDFE852431EE67004BE4BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DDFE842431EE67004BE4BD /* Preview Assets.xcassets */; };
-		16DDFE882431EE67004BE4BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DDFE862431EE67004BE4BD /* LaunchScreen.storyboard */; };
-		16DDFE932431EE67004BE4BD /* HandySousChefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFE922431EE67004BE4BD /* HandySousChefTests.swift */; };
-		16DDFE9E2431EE67004BE4BD /* HandySousChefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFE9D2431EE67004BE4BD /* HandySousChefUITests.swift */; };
-		16DDFEAC24323C92004BE4BD /* MealSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DDFEAB24323C91004BE4BD /* MealSelect.swift */; };
+		1637540E24374B300021F808 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637540D24374B300021F808 /* SwipingController.swift */; };
+		1637541A24377E430021F808 /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637541824377E430021F808 /* MealCollectionViewCell.swift */; };
+		1637541B24377E430021F808 /* MealCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1637541924377E430021F808 /* MealCollectionViewCell.xib */; };
+		1637541D243781E80021F808 /* SwippingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637541C243781E80021F808 /* SwippingModel.swift */; };
+		1653BEF22435DE140016A6C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BEF12435DE140016A6C9 /* AppDelegate.swift */; };
+		1653BEF42435DE140016A6C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BEF32435DE140016A6C9 /* SceneDelegate.swift */; };
+		1653BEF92435DE140016A6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1653BEF72435DE140016A6C9 /* Main.storyboard */; };
+		1653BEFB2435DE150016A6C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1653BEFA2435DE150016A6C9 /* Assets.xcassets */; };
+		1653BEFE2435DE150016A6C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1653BEFC2435DE150016A6C9 /* LaunchScreen.storyboard */; };
+		1653BF092435DE150016A6C9 /* HandySousChefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BF082435DE150016A6C9 /* HandySousChefTests.swift */; };
+		1653BF142435DE150016A6C9 /* HandySousChefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BF132435DE150016A6C9 /* HandySousChefUITests.swift */; };
+		1653BF2B243612CF0016A6C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BF2A243612CF0016A6C9 /* ViewController.swift */; };
+		7F526E994353C60BEFBB83D6 /* Pods_HandySousChef_HandySousChefUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD674E9F593A26B3F640BF04 /* Pods_HandySousChef_HandySousChefUITests.framework */; };
+		C63BCD81B81697407A35A8CC /* Pods_HandySousChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C421F0F5267874D154BF567 /* Pods_HandySousChef.framework */; };
+		FD85306579E1248A666E4DC3 /* Pods_HandySousChefTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531A4B3A2E90AB87CCB6C3C7 /* Pods_HandySousChefTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		16DDFE8F2431EE67004BE4BD /* PBXContainerItemProxy */ = {
+		1653BF052435DE150016A6C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 16DDFE702431EE66004BE4BD /* Project object */;
+			containerPortal = 1653BEE62435DE140016A6C9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 16DDFE772431EE66004BE4BD;
+			remoteGlobalIDString = 1653BEED2435DE140016A6C9;
 			remoteInfo = HandySousChef;
 		};
-		16DDFE9A2431EE67004BE4BD /* PBXContainerItemProxy */ = {
+		1653BF102435DE150016A6C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 16DDFE702431EE66004BE4BD /* Project object */;
+			containerPortal = 1653BEE62435DE140016A6C9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 16DDFE772431EE66004BE4BD;
+			remoteGlobalIDString = 1653BEED2435DE140016A6C9;
 			remoteInfo = HandySousChef;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		163753A5243496E500B417D5 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
-		163753A92434A71400B417D5 /* RecipieSuggest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipieSuggest.swift; sourceTree = "<group>"; };
-		163753AB2434E38A00B417D5 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
-		16DDFE782431EE66004BE4BD /* HandySousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandySousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		16DDFE7B2431EE66004BE4BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16DDFE7D2431EE66004BE4BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		16DDFE7F2431EE66004BE4BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		16DDFE812431EE67004BE4BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		16DDFE842431EE67004BE4BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		16DDFE872431EE67004BE4BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		16DDFE892431EE67004BE4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16DDFE8E2431EE67004BE4BD /* HandySousChefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandySousChefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		16DDFE922431EE67004BE4BD /* HandySousChefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandySousChefTests.swift; sourceTree = "<group>"; };
-		16DDFE942431EE67004BE4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16DDFE992431EE67004BE4BD /* HandySousChefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandySousChefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		16DDFE9D2431EE67004BE4BD /* HandySousChefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandySousChefUITests.swift; sourceTree = "<group>"; };
-		16DDFE9F2431EE67004BE4BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16DDFEAB24323C91004BE4BD /* MealSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSelect.swift; sourceTree = "<group>"; };
+		14D423536A6E96FE520C8FAF /* Pods-HandySousChefTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChefTests.release.xcconfig"; path = "Target Support Files/Pods-HandySousChefTests/Pods-HandySousChefTests.release.xcconfig"; sourceTree = "<group>"; };
+		1637540D24374B300021F808 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		1637541824377E430021F808 /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
+		1637541924377E430021F808 /* MealCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCollectionViewCell.xib; sourceTree = "<group>"; };
+		1637541C243781E80021F808 /* SwippingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwippingModel.swift; sourceTree = "<group>"; };
+		1653BEEE2435DE140016A6C9 /* HandySousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandySousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1653BEF12435DE140016A6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1653BEF32435DE140016A6C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1653BEF82435DE140016A6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1653BEFA2435DE150016A6C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1653BEFD2435DE150016A6C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1653BEFF2435DE150016A6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1653BF042435DE150016A6C9 /* HandySousChefTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandySousChefTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1653BF082435DE150016A6C9 /* HandySousChefTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandySousChefTests.swift; sourceTree = "<group>"; };
+		1653BF0A2435DE150016A6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1653BF0F2435DE150016A6C9 /* HandySousChefUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandySousChefUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1653BF132435DE150016A6C9 /* HandySousChefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandySousChefUITests.swift; sourceTree = "<group>"; };
+		1653BF152435DE150016A6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1653BF2A243612CF0016A6C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E6390AA4E0761AF0975528F /* Pods-HandySousChef-HandySousChefUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChef-HandySousChefUITests.release.xcconfig"; path = "Target Support Files/Pods-HandySousChef-HandySousChefUITests/Pods-HandySousChef-HandySousChefUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A3B4150131BE0F8AB1B9AF3 /* Pods-HandySousChefTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChefTests.debug.xcconfig"; path = "Target Support Files/Pods-HandySousChefTests/Pods-HandySousChefTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C421F0F5267874D154BF567 /* Pods_HandySousChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandySousChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		531A4B3A2E90AB87CCB6C3C7 /* Pods_HandySousChefTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandySousChefTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D26A46E340F695E45BCB7CE /* Pods-HandySousChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChef.debug.xcconfig"; path = "Target Support Files/Pods-HandySousChef/Pods-HandySousChef.debug.xcconfig"; sourceTree = "<group>"; };
+		D030DE8459D900810813BF3F /* Pods-HandySousChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChef.release.xcconfig"; path = "Target Support Files/Pods-HandySousChef/Pods-HandySousChef.release.xcconfig"; sourceTree = "<group>"; };
+		D876A9F69D1B89A46FCB3433 /* Pods-HandySousChef-HandySousChefUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChef-HandySousChefUITests.debug.xcconfig"; path = "Target Support Files/Pods-HandySousChef-HandySousChefUITests/Pods-HandySousChef-HandySousChefUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD674E9F593A26B3F640BF04 /* Pods_HandySousChef_HandySousChefUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandySousChef_HandySousChefUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		16DDFE752431EE66004BE4BD /* Frameworks */ = {
+		1653BEEB2435DE140016A6C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C63BCD81B81697407A35A8CC /* Pods_HandySousChef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16DDFE8B2431EE67004BE4BD /* Frameworks */ = {
+		1653BF012435DE150016A6C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD85306579E1248A666E4DC3 /* Pods_HandySousChefTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16DDFE962431EE67004BE4BD /* Frameworks */ = {
+		1653BF0C2435DE150016A6C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F526E994353C60BEFBB83D6 /* Pods_HandySousChef_HandySousChefUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16DDFE6F2431EE66004BE4BD = {
+		1637540B24374AE40021F808 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				16DDFE7A2431EE66004BE4BD /* HandySousChef */,
-				16DDFE912431EE67004BE4BD /* HandySousChefTests */,
-				16DDFE9C2431EE67004BE4BD /* HandySousChefUITests */,
-				16DDFE792431EE66004BE4BD /* Products */,
+				1637540C24374AF00021F808 /* MealSelect */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1637540C24374AF00021F808 /* MealSelect */ = {
+			isa = PBXGroup;
+			children = (
+				16375411243771E40021F808 /* MealSelectCell */,
+				1637540D24374B300021F808 /* SwipingController.swift */,
+				1637541C243781E80021F808 /* SwippingModel.swift */,
+			);
+			path = MealSelect;
+			sourceTree = "<group>";
+		};
+		16375411243771E40021F808 /* MealSelectCell */ = {
+			isa = PBXGroup;
+			children = (
+				1637541824377E430021F808 /* MealCollectionViewCell.swift */,
+				1637541924377E430021F808 /* MealCollectionViewCell.xib */,
+			);
+			path = MealSelectCell;
+			sourceTree = "<group>";
+		};
+		1653BEE52435DE140016A6C9 = {
+			isa = PBXGroup;
+			children = (
+				1653BEF02435DE140016A6C9 /* HandySousChef */,
+				1653BF072435DE150016A6C9 /* HandySousChefTests */,
+				1653BF122435DE150016A6C9 /* HandySousChefUITests */,
+				1653BEEF2435DE140016A6C9 /* Products */,
+				8DE2B0CF4647902871B10AF2 /* Pods */,
+				5BCE9FE6710129C2C9AF6386 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		16DDFE792431EE66004BE4BD /* Products */ = {
+		1653BEEF2435DE140016A6C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16DDFE782431EE66004BE4BD /* HandySousChef.app */,
-				16DDFE8E2431EE67004BE4BD /* HandySousChefTests.xctest */,
-				16DDFE992431EE67004BE4BD /* HandySousChefUITests.xctest */,
+				1653BEEE2435DE140016A6C9 /* HandySousChef.app */,
+				1653BF042435DE150016A6C9 /* HandySousChefTests.xctest */,
+				1653BF0F2435DE150016A6C9 /* HandySousChefUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		16DDFE7A2431EE66004BE4BD /* HandySousChef */ = {
+		1653BEF02435DE140016A6C9 /* HandySousChef */ = {
 			isa = PBXGroup;
 			children = (
-				16DDFE7B2431EE66004BE4BD /* AppDelegate.swift */,
-				16DDFE7D2431EE66004BE4BD /* SceneDelegate.swift */,
-				16DDFE7F2431EE66004BE4BD /* ContentView.swift */,
-				163753A5243496E500B417D5 /* PageControl.swift */,
-				16DDFE812431EE67004BE4BD /* Assets.xcassets */,
-				16DDFE862431EE67004BE4BD /* LaunchScreen.storyboard */,
-				16DDFE892431EE67004BE4BD /* Info.plist */,
-				16DDFE832431EE67004BE4BD /* Preview Content */,
-				16DDFEAB24323C91004BE4BD /* MealSelect.swift */,
-				163753A92434A71400B417D5 /* RecipieSuggest.swift */,
-				163753AB2434E38A00B417D5 /* ArticleView.swift */,
+				1637540B24374AE40021F808 /* Scenes */,
+				1653BEF12435DE140016A6C9 /* AppDelegate.swift */,
+				1653BEF32435DE140016A6C9 /* SceneDelegate.swift */,
+				1653BEF72435DE140016A6C9 /* Main.storyboard */,
+				1653BF2A243612CF0016A6C9 /* ViewController.swift */,
+				1653BEFA2435DE150016A6C9 /* Assets.xcassets */,
+				1653BEFC2435DE150016A6C9 /* LaunchScreen.storyboard */,
+				1653BEFF2435DE150016A6C9 /* Info.plist */,
 			);
 			path = HandySousChef;
 			sourceTree = "<group>";
 		};
-		16DDFE832431EE67004BE4BD /* Preview Content */ = {
+		1653BF072435DE150016A6C9 /* HandySousChefTests */ = {
 			isa = PBXGroup;
 			children = (
-				16DDFE842431EE67004BE4BD /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		16DDFE912431EE67004BE4BD /* HandySousChefTests */ = {
-			isa = PBXGroup;
-			children = (
-				16DDFE922431EE67004BE4BD /* HandySousChefTests.swift */,
-				16DDFE942431EE67004BE4BD /* Info.plist */,
+				1653BF082435DE150016A6C9 /* HandySousChefTests.swift */,
+				1653BF0A2435DE150016A6C9 /* Info.plist */,
 			);
 			path = HandySousChefTests;
 			sourceTree = "<group>";
 		};
-		16DDFE9C2431EE67004BE4BD /* HandySousChefUITests */ = {
+		1653BF122435DE150016A6C9 /* HandySousChefUITests */ = {
 			isa = PBXGroup;
 			children = (
-				16DDFE9D2431EE67004BE4BD /* HandySousChefUITests.swift */,
-				16DDFE9F2431EE67004BE4BD /* Info.plist */,
+				1653BF132435DE150016A6C9 /* HandySousChefUITests.swift */,
+				1653BF152435DE150016A6C9 /* Info.plist */,
 			);
 			path = HandySousChefUITests;
+			sourceTree = "<group>";
+		};
+		5BCE9FE6710129C2C9AF6386 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C421F0F5267874D154BF567 /* Pods_HandySousChef.framework */,
+				FD674E9F593A26B3F640BF04 /* Pods_HandySousChef_HandySousChefUITests.framework */,
+				531A4B3A2E90AB87CCB6C3C7 /* Pods_HandySousChefTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8DE2B0CF4647902871B10AF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D26A46E340F695E45BCB7CE /* Pods-HandySousChef.debug.xcconfig */,
+				D030DE8459D900810813BF3F /* Pods-HandySousChef.release.xcconfig */,
+				D876A9F69D1B89A46FCB3433 /* Pods-HandySousChef-HandySousChefUITests.debug.xcconfig */,
+				2E6390AA4E0761AF0975528F /* Pods-HandySousChef-HandySousChefUITests.release.xcconfig */,
+				4A3B4150131BE0F8AB1B9AF3 /* Pods-HandySousChefTests.debug.xcconfig */,
+				14D423536A6E96FE520C8FAF /* Pods-HandySousChefTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		16DDFE772431EE66004BE4BD /* HandySousChef */ = {
+		1653BEED2435DE140016A6C9 /* HandySousChef */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16DDFEA22431EE67004BE4BD /* Build configuration list for PBXNativeTarget "HandySousChef" */;
+			buildConfigurationList = 1653BF182435DE150016A6C9 /* Build configuration list for PBXNativeTarget "HandySousChef" */;
 			buildPhases = (
-				16DDFE742431EE66004BE4BD /* Sources */,
-				16DDFE752431EE66004BE4BD /* Frameworks */,
-				16DDFE762431EE66004BE4BD /* Resources */,
+				21119E33C97CA13E9A2D8BF8 /* [CP] Check Pods Manifest.lock */,
+				1653BEEA2435DE140016A6C9 /* Sources */,
+				1653BEEB2435DE140016A6C9 /* Frameworks */,
+				1653BEEC2435DE140016A6C9 /* Resources */,
+				1918268CD601392C1C9EFBE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,69 +223,72 @@
 			);
 			name = HandySousChef;
 			productName = HandySousChef;
-			productReference = 16DDFE782431EE66004BE4BD /* HandySousChef.app */;
+			productReference = 1653BEEE2435DE140016A6C9 /* HandySousChef.app */;
 			productType = "com.apple.product-type.application";
 		};
-		16DDFE8D2431EE67004BE4BD /* HandySousChefTests */ = {
+		1653BF032435DE150016A6C9 /* HandySousChefTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16DDFEA52431EE67004BE4BD /* Build configuration list for PBXNativeTarget "HandySousChefTests" */;
+			buildConfigurationList = 1653BF1B2435DE150016A6C9 /* Build configuration list for PBXNativeTarget "HandySousChefTests" */;
 			buildPhases = (
-				16DDFE8A2431EE67004BE4BD /* Sources */,
-				16DDFE8B2431EE67004BE4BD /* Frameworks */,
-				16DDFE8C2431EE67004BE4BD /* Resources */,
+				0DF6375701C325DBA451A996 /* [CP] Check Pods Manifest.lock */,
+				1653BF002435DE150016A6C9 /* Sources */,
+				1653BF012435DE150016A6C9 /* Frameworks */,
+				1653BF022435DE150016A6C9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				16DDFE902431EE67004BE4BD /* PBXTargetDependency */,
+				1653BF062435DE150016A6C9 /* PBXTargetDependency */,
 			);
 			name = HandySousChefTests;
 			productName = HandySousChefTests;
-			productReference = 16DDFE8E2431EE67004BE4BD /* HandySousChefTests.xctest */;
+			productReference = 1653BF042435DE150016A6C9 /* HandySousChefTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		16DDFE982431EE67004BE4BD /* HandySousChefUITests */ = {
+		1653BF0E2435DE150016A6C9 /* HandySousChefUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16DDFEA82431EE67004BE4BD /* Build configuration list for PBXNativeTarget "HandySousChefUITests" */;
+			buildConfigurationList = 1653BF1E2435DE150016A6C9 /* Build configuration list for PBXNativeTarget "HandySousChefUITests" */;
 			buildPhases = (
-				16DDFE952431EE67004BE4BD /* Sources */,
-				16DDFE962431EE67004BE4BD /* Frameworks */,
-				16DDFE972431EE67004BE4BD /* Resources */,
+				03FECB5E1A5A0896ABE9DE5B /* [CP] Check Pods Manifest.lock */,
+				1653BF0B2435DE150016A6C9 /* Sources */,
+				1653BF0C2435DE150016A6C9 /* Frameworks */,
+				1653BF0D2435DE150016A6C9 /* Resources */,
+				48C87608FAC9777B78A36D92 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				16DDFE9B2431EE67004BE4BD /* PBXTargetDependency */,
+				1653BF112435DE150016A6C9 /* PBXTargetDependency */,
 			);
 			name = HandySousChefUITests;
 			productName = HandySousChefUITests;
-			productReference = 16DDFE992431EE67004BE4BD /* HandySousChefUITests.xctest */;
+			productReference = 1653BF0F2435DE150016A6C9 /* HandySousChefUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		16DDFE702431EE66004BE4BD /* Project object */ = {
+		1653BEE62435DE140016A6C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Usman Mukhtar";
 				TargetAttributes = {
-					16DDFE772431EE66004BE4BD = {
+					1653BEED2435DE140016A6C9 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
-					16DDFE8D2431EE67004BE4BD = {
+					1653BF032435DE150016A6C9 = {
 						CreatedOnToolsVersion = 11.2.1;
-						TestTargetID = 16DDFE772431EE66004BE4BD;
+						TestTargetID = 1653BEED2435DE140016A6C9;
 					};
-					16DDFE982431EE67004BE4BD = {
+					1653BF0E2435DE150016A6C9 = {
 						CreatedOnToolsVersion = 11.2.1;
-						TestTargetID = 16DDFE772431EE66004BE4BD;
+						TestTargetID = 1653BEED2435DE140016A6C9;
 					};
 				};
 			};
-			buildConfigurationList = 16DDFE732431EE66004BE4BD /* Build configuration list for PBXProject "HandySousChef" */;
+			buildConfigurationList = 1653BEE92435DE140016A6C9 /* Build configuration list for PBXProject "HandySousChef" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,37 +296,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 16DDFE6F2431EE66004BE4BD;
-			productRefGroup = 16DDFE792431EE66004BE4BD /* Products */;
+			mainGroup = 1653BEE52435DE140016A6C9;
+			productRefGroup = 1653BEEF2435DE140016A6C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				16DDFE772431EE66004BE4BD /* HandySousChef */,
-				16DDFE8D2431EE67004BE4BD /* HandySousChefTests */,
-				16DDFE982431EE67004BE4BD /* HandySousChefUITests */,
+				1653BEED2435DE140016A6C9 /* HandySousChef */,
+				1653BF032435DE150016A6C9 /* HandySousChefTests */,
+				1653BF0E2435DE150016A6C9 /* HandySousChefUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		16DDFE762431EE66004BE4BD /* Resources */ = {
+		1653BEEC2435DE140016A6C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16DDFE882431EE67004BE4BD /* LaunchScreen.storyboard in Resources */,
-				16DDFE852431EE67004BE4BD /* Preview Assets.xcassets in Resources */,
-				16DDFE822431EE67004BE4BD /* Assets.xcassets in Resources */,
+				1653BEFE2435DE150016A6C9 /* LaunchScreen.storyboard in Resources */,
+				1653BEFB2435DE150016A6C9 /* Assets.xcassets in Resources */,
+				1637541B24377E430021F808 /* MealCollectionViewCell.xib in Resources */,
+				1653BEF92435DE140016A6C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16DDFE8C2431EE67004BE4BD /* Resources */ = {
+		1653BF022435DE150016A6C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16DDFE972431EE67004BE4BD /* Resources */ = {
+		1653BF0D2435DE150016A6C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -274,57 +336,167 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03FECB5E1A5A0896ABE9DE5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandySousChef-HandySousChefUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DF6375701C325DBA451A996 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandySousChefTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1918268CD601392C1C9EFBE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandySousChef/Pods-HandySousChef-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandySousChef/Pods-HandySousChef-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HandySousChef/Pods-HandySousChef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21119E33C97CA13E9A2D8BF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandySousChef-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48C87608FAC9777B78A36D92 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandySousChef-HandySousChefUITests/Pods-HandySousChef-HandySousChefUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandySousChef-HandySousChefUITests/Pods-HandySousChef-HandySousChefUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HandySousChef-HandySousChefUITests/Pods-HandySousChef-HandySousChefUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		16DDFE742431EE66004BE4BD /* Sources */ = {
+		1653BEEA2435DE140016A6C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				163753AA2434A71400B417D5 /* RecipieSuggest.swift in Sources */,
-				163753A6243496E500B417D5 /* PageControl.swift in Sources */,
-				16DDFE7C2431EE66004BE4BD /* AppDelegate.swift in Sources */,
-				16DDFE7E2431EE66004BE4BD /* SceneDelegate.swift in Sources */,
-				16DDFEAC24323C92004BE4BD /* MealSelect.swift in Sources */,
-				163753AC2434E38A00B417D5 /* ArticleView.swift in Sources */,
-				16DDFE802431EE66004BE4BD /* ContentView.swift in Sources */,
+				1653BEF22435DE140016A6C9 /* AppDelegate.swift in Sources */,
+				1653BF2B243612CF0016A6C9 /* ViewController.swift in Sources */,
+				1653BEF42435DE140016A6C9 /* SceneDelegate.swift in Sources */,
+				1637540E24374B300021F808 /* SwipingController.swift in Sources */,
+				1637541A24377E430021F808 /* MealCollectionViewCell.swift in Sources */,
+				1637541D243781E80021F808 /* SwippingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16DDFE8A2431EE67004BE4BD /* Sources */ = {
+		1653BF002435DE150016A6C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16DDFE932431EE67004BE4BD /* HandySousChefTests.swift in Sources */,
+				1653BF092435DE150016A6C9 /* HandySousChefTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16DDFE952431EE67004BE4BD /* Sources */ = {
+		1653BF0B2435DE150016A6C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16DDFE9E2431EE67004BE4BD /* HandySousChefUITests.swift in Sources */,
+				1653BF142435DE150016A6C9 /* HandySousChefUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		16DDFE902431EE67004BE4BD /* PBXTargetDependency */ = {
+		1653BF062435DE150016A6C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 16DDFE772431EE66004BE4BD /* HandySousChef */;
-			targetProxy = 16DDFE8F2431EE67004BE4BD /* PBXContainerItemProxy */;
+			target = 1653BEED2435DE140016A6C9 /* HandySousChef */;
+			targetProxy = 1653BF052435DE150016A6C9 /* PBXContainerItemProxy */;
 		};
-		16DDFE9B2431EE67004BE4BD /* PBXTargetDependency */ = {
+		1653BF112435DE150016A6C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 16DDFE772431EE66004BE4BD /* HandySousChef */;
-			targetProxy = 16DDFE9A2431EE67004BE4BD /* PBXContainerItemProxy */;
+			target = 1653BEED2435DE140016A6C9 /* HandySousChef */;
+			targetProxy = 1653BF102435DE150016A6C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		16DDFE862431EE67004BE4BD /* LaunchScreen.storyboard */ = {
+		1653BEF72435DE140016A6C9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				16DDFE872431EE67004BE4BD /* Base */,
+				1653BEF82435DE140016A6C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1653BEFC2435DE150016A6C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1653BEFD2435DE150016A6C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -332,7 +504,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		16DDFEA02431EE67004BE4BD /* Debug */ = {
+		1653BF162435DE150016A6C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -392,7 +564,7 @@
 			};
 			name = Debug;
 		};
-		16DDFEA12431EE67004BE4BD /* Release */ = {
+		1653BF172435DE150016A6C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -446,14 +618,13 @@
 			};
 			name = Release;
 		};
-		16DDFEA32431EE67004BE4BD /* Debug */ = {
+		1653BF192435DE150016A6C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D26A46E340F695E45BCB7CE /* Pods-HandySousChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HandySousChef/Preview Content\"";
 				DEVELOPMENT_TEAM = W6WC7CXPN4;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HandySousChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,14 +637,13 @@
 			};
 			name = Debug;
 		};
-		16DDFEA42431EE67004BE4BD /* Release */ = {
+		1653BF1A2435DE150016A6C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D030DE8459D900810813BF3F /* Pods-HandySousChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HandySousChef/Preview Content\"";
 				DEVELOPMENT_TEAM = W6WC7CXPN4;
-				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HandySousChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,8 +656,9 @@
 			};
 			name = Release;
 		};
-		16DDFEA62431EE67004BE4BD /* Debug */ = {
+		1653BF1C2435DE150016A6C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A3B4150131BE0F8AB1B9AF3 /* Pods-HandySousChefTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,8 +678,9 @@
 			};
 			name = Debug;
 		};
-		16DDFEA72431EE67004BE4BD /* Release */ = {
+		1653BF1D2435DE150016A6C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D423536A6E96FE520C8FAF /* Pods-HandySousChefTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,8 +700,9 @@
 			};
 			name = Release;
 		};
-		16DDFEA92431EE67004BE4BD /* Debug */ = {
+		1653BF1F2435DE150016A6C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D876A9F69D1B89A46FCB3433 /* Pods-HandySousChef-HandySousChefUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,8 +720,9 @@
 			};
 			name = Debug;
 		};
-		16DDFEAA2431EE67004BE4BD /* Release */ = {
+		1653BF202435DE150016A6C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E6390AA4E0761AF0975528F /* Pods-HandySousChef-HandySousChefUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -569,43 +743,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		16DDFE732431EE66004BE4BD /* Build configuration list for PBXProject "HandySousChef" */ = {
+		1653BEE92435DE140016A6C9 /* Build configuration list for PBXProject "HandySousChef" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16DDFEA02431EE67004BE4BD /* Debug */,
-				16DDFEA12431EE67004BE4BD /* Release */,
+				1653BF162435DE150016A6C9 /* Debug */,
+				1653BF172435DE150016A6C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16DDFEA22431EE67004BE4BD /* Build configuration list for PBXNativeTarget "HandySousChef" */ = {
+		1653BF182435DE150016A6C9 /* Build configuration list for PBXNativeTarget "HandySousChef" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16DDFEA32431EE67004BE4BD /* Debug */,
-				16DDFEA42431EE67004BE4BD /* Release */,
+				1653BF192435DE150016A6C9 /* Debug */,
+				1653BF1A2435DE150016A6C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16DDFEA52431EE67004BE4BD /* Build configuration list for PBXNativeTarget "HandySousChefTests" */ = {
+		1653BF1B2435DE150016A6C9 /* Build configuration list for PBXNativeTarget "HandySousChefTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16DDFEA62431EE67004BE4BD /* Debug */,
-				16DDFEA72431EE67004BE4BD /* Release */,
+				1653BF1C2435DE150016A6C9 /* Debug */,
+				1653BF1D2435DE150016A6C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16DDFEA82431EE67004BE4BD /* Build configuration list for PBXNativeTarget "HandySousChefUITests" */ = {
+		1653BF1E2435DE150016A6C9 /* Build configuration list for PBXNativeTarget "HandySousChefUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16DDFEA92431EE67004BE4BD /* Debug */,
-				16DDFEAA2431EE67004BE4BD /* Release */,
+				1653BF1F2435DE150016A6C9 /* Debug */,
+				1653BF202435DE150016A6C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 16DDFE702431EE66004BE4BD /* Project object */;
+	rootObject = 1653BEE62435DE140016A6C9 /* Project object */;
 }
