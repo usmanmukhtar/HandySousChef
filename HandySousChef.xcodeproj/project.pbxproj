@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1637540E24374B300021F808 /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637540D24374B300021F808 /* SwipingController.swift */; };
 		1637541A24377E430021F808 /* MealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637541824377E430021F808 /* MealCollectionViewCell.swift */; };
 		1637541B24377E430021F808 /* MealCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1637541924377E430021F808 /* MealCollectionViewCell.xib */; };
 		1637541D243781E80021F808 /* SwippingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637541C243781E80021F808 /* SwippingModel.swift */; };
 		163EEB8A2439C81F0098DF3F /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163EEB892439C81F0098DF3F /* Recommendation.swift */; };
+		163EEB8E243A07400098DF3F /* RecommendationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163EEB8C243A07400098DF3F /* RecommendationCollectionViewCell.swift */; };
+		163EEB8F243A07400098DF3F /* RecommendationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 163EEB8D243A07400098DF3F /* RecommendationCollectionViewCell.xib */; };
 		1653BEF22435DE140016A6C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BEF12435DE140016A6C9 /* AppDelegate.swift */; };
 		1653BEF42435DE140016A6C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BEF32435DE140016A6C9 /* SceneDelegate.swift */; };
 		1653BEF92435DE140016A6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1653BEF72435DE140016A6C9 /* Main.storyboard */; };
@@ -44,11 +45,12 @@
 
 /* Begin PBXFileReference section */
 		14D423536A6E96FE520C8FAF /* Pods-HandySousChefTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChefTests.release.xcconfig"; path = "Target Support Files/Pods-HandySousChefTests/Pods-HandySousChefTests.release.xcconfig"; sourceTree = "<group>"; };
-		1637540D24374B300021F808 /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		1637541824377E430021F808 /* MealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCollectionViewCell.swift; sourceTree = "<group>"; };
 		1637541924377E430021F808 /* MealCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealCollectionViewCell.xib; sourceTree = "<group>"; };
 		1637541C243781E80021F808 /* SwippingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwippingModel.swift; sourceTree = "<group>"; };
 		163EEB892439C81F0098DF3F /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
+		163EEB8C243A07400098DF3F /* RecommendationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCollectionViewCell.swift; sourceTree = "<group>"; };
+		163EEB8D243A07400098DF3F /* RecommendationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCollectionViewCell.xib; sourceTree = "<group>"; };
 		1653BEEE2435DE140016A6C9 /* HandySousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandySousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1653BEF12435DE140016A6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1653BEF32435DE140016A6C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				16375411243771E40021F808 /* MealSelectCell */,
-				1637540D24374B300021F808 /* SwipingController.swift */,
 				1637541C243781E80021F808 /* SwippingModel.swift */,
 			);
 			path = MealSelect;
@@ -132,9 +133,19 @@
 		163EEB882439C79B0098DF3F /* Recommendation */ = {
 			isa = PBXGroup;
 			children = (
+				163EEB8B243A07050098DF3F /* RecommendationCell */,
 				163EEB892439C81F0098DF3F /* Recommendation.swift */,
 			);
 			path = Recommendation;
+			sourceTree = "<group>";
+		};
+		163EEB8B243A07050098DF3F /* RecommendationCell */ = {
+			isa = PBXGroup;
+			children = (
+				163EEB8C243A07400098DF3F /* RecommendationCollectionViewCell.swift */,
+				163EEB8D243A07400098DF3F /* RecommendationCollectionViewCell.xib */,
+			);
+			path = RecommendationCell;
 			sourceTree = "<group>";
 		};
 		1653BEE52435DE140016A6C9 = {
@@ -326,6 +337,7 @@
 			files = (
 				1653BEFE2435DE150016A6C9 /* LaunchScreen.storyboard in Resources */,
 				1653BEFB2435DE150016A6C9 /* Assets.xcassets in Resources */,
+				163EEB8F243A07400098DF3F /* RecommendationCollectionViewCell.xib in Resources */,
 				1637541B24377E430021F808 /* MealCollectionViewCell.xib in Resources */,
 				1653BEF92435DE140016A6C9 /* Main.storyboard in Resources */,
 			);
@@ -458,8 +470,8 @@
 				1653BEF22435DE140016A6C9 /* AppDelegate.swift in Sources */,
 				1653BF2B243612CF0016A6C9 /* ViewController.swift in Sources */,
 				1653BEF42435DE140016A6C9 /* SceneDelegate.swift in Sources */,
-				1637540E24374B300021F808 /* SwipingController.swift in Sources */,
 				1637541A24377E430021F808 /* MealCollectionViewCell.swift in Sources */,
+				163EEB8E243A07400098DF3F /* RecommendationCollectionViewCell.swift in Sources */,
 				163EEB8A2439C81F0098DF3F /* Recommendation.swift in Sources */,
 				1637541D243781E80021F808 /* SwippingModel.swift in Sources */,
 			);

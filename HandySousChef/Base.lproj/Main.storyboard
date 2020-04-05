@@ -144,17 +144,52 @@
         <!--Recommendation-->
         <scene sceneID="BjK-YU-dfy">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7U-hB-A2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Recommendation" id="d2j-N1-NTS" customClass="Recommendation" customModule="HandySousChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kay-hg-kcL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jw0-Tc-2w4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="30" minimumInteritemSpacing="30" id="D1d-79-dVs">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="e7v-iG-kKr" customClass="RecommendationCollectionViewCell" customModule="HandySousChef" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YCi-lW-fir">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="d2j-N1-NTS" id="6aU-69-xG6"/>
+                                    <outlet property="delegate" destination="d2j-N1-NTS" id="BcX-Xa-z1h"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Jw0-Tc-2w4" secondAttribute="bottom" id="7bP-vI-KsD"/>
+                            <constraint firstItem="Jw0-Tc-2w4" firstAttribute="leading" secondItem="scM-Yw-P49" secondAttribute="leading" id="8uq-2L-BIf"/>
+                            <constraint firstItem="Jw0-Tc-2w4" firstAttribute="trailing" secondItem="scM-Yw-P49" secondAttribute="trailing" id="VOg-fW-kqf"/>
+                            <constraint firstItem="Jw0-Tc-2w4" firstAttribute="top" secondItem="kay-hg-kcL" secondAttribute="top" id="bwj-Re-us0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="scM-Yw-P49"/>
                     </view>
+                    <connections>
+                        <outlet property="collView" destination="Jw0-Tc-2w4" id="Acz-2x-hIC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W7U-hB-A2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="136.69950738916256"/>
+            <point key="canvasLocation" x="1579.7101449275362" y="136.60714285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T15-Eb-6cO">
