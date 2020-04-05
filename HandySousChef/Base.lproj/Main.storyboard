@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m3n-3t-nCW">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HandySousChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6M-dM-85D">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sog-ea-uOB">
-                                        <rect key="frame" x="24" y="100" width="327" height="43"/>
+                                        <rect key="frame" x="24" y="70" width="366" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="43" id="tjO-la-4XV"/>
                                         </constraints>
@@ -35,9 +35,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-hd-jsB">
-                                        <rect key="frame" x="0.0" y="223" width="375" height="444"/>
+                                        <rect key="frame" x="0.0" y="113" width="414" height="548"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ISN-k6-V1i">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ISN-k6-V1i">
                                             <size key="itemSize" width="50" height="50"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -59,24 +59,27 @@
                                         </connections>
                                     </collectionView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="UBk-d5-Yxj">
-                                        <rect key="frame" x="20" y="697" width="335" height="37"/>
+                                        <rect key="frame" x="20" y="691" width="374" height="83"/>
                                         <subviews>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uUA-2M-V9P">
-                                                <rect key="frame" x="0.0" y="0.0" width="39" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="83"/>
                                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="currentPageIndicatorTintColor" red="0.8980392157" green="0.56862745100000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </pageControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOO-XH-j9M">
-                                                <rect key="frame" x="303" y="0.0" width="32" height="37"/>
+                                                <rect key="frame" x="342" y="0.0" width="32" height="83"/>
                                                 <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <action selector="btnSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wg-zU-kZf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="748-nb-lX2">
-                                        <rect key="frame" x="0.0" y="312" width="375" height="110"/>
+                                        <rect key="frame" x="0.0" y="312" width="414" height="53"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBr-3f-dRW">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="110"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="53"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <state key="normal" title="&lt;">
                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -86,14 +89,13 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GH-9H-Lgd">
-                                                <rect key="frame" x="345" y="0.0" width="30" height="110"/>
+                                                <rect key="frame" x="384" y="0.0" width="30" height="53"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                 <state key="normal" title="&gt;">
                                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="btnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sQl-6P-Bx3"/>
-                                                    <action selector="btnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUc-Fy-nKV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -102,16 +104,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="748-nb-lX2" firstAttribute="centerX" secondItem="I6M-dM-85D" secondAttribute="centerX" id="1W6-B5-oZT"/>
-                                    <constraint firstItem="748-nb-lX2" firstAttribute="centerY" secondItem="I6M-dM-85D" secondAttribute="centerY" id="LFH-Ur-4aY"/>
+                                    <constraint firstItem="2Cb-hd-jsB" firstAttribute="top" secondItem="sog-ea-uOB" secondAttribute="bottom" id="3VN-se-hGY"/>
+                                    <constraint firstItem="2Cb-hd-jsB" firstAttribute="centerY" secondItem="I6M-dM-85D" secondAttribute="centerY" id="NyP-Jv-xkS"/>
                                     <constraint firstItem="sog-ea-uOB" firstAttribute="leading" secondItem="I6M-dM-85D" secondAttribute="leading" constant="24" id="Smz-8w-KYh"/>
                                     <constraint firstItem="748-nb-lX2" firstAttribute="top" secondItem="I6M-dM-85D" secondAttribute="top" constant="312" id="T95-wa-Q0c"/>
                                     <constraint firstItem="748-nb-lX2" firstAttribute="leading" secondItem="I6M-dM-85D" secondAttribute="leading" id="TXa-Fj-H0n"/>
-                                    <constraint firstItem="2Cb-hd-jsB" firstAttribute="top" secondItem="sog-ea-uOB" secondAttribute="bottom" constant="80" id="XF3-R9-goq"/>
                                     <constraint firstAttribute="trailing" secondItem="2Cb-hd-jsB" secondAttribute="trailing" id="b7v-q9-592"/>
                                     <constraint firstAttribute="trailing" secondItem="sog-ea-uOB" secondAttribute="trailing" constant="24" id="eQw-Sm-duy"/>
                                     <constraint firstItem="2Cb-hd-jsB" firstAttribute="leading" secondItem="I6M-dM-85D" secondAttribute="leading" id="iVe-Wv-8Wd"/>
-                                    <constraint firstItem="sog-ea-uOB" firstAttribute="top" secondItem="I6M-dM-85D" secondAttribute="top" constant="100" id="jIs-2f-33g"/>
-                                    <constraint firstItem="UBk-d5-Yxj" firstAttribute="top" secondItem="2Cb-hd-jsB" secondAttribute="bottom" constant="30" id="sQ7-AI-PQ2"/>
+                                    <constraint firstItem="sog-ea-uOB" firstAttribute="top" secondItem="I6M-dM-85D" secondAttribute="top" constant="70" id="jIs-2f-33g"/>
+                                    <constraint firstItem="UBk-d5-Yxj" firstAttribute="top" secondItem="2Cb-hd-jsB" secondAttribute="bottom" constant="30" id="rC5-pq-8WD"/>
+                                    <constraint firstItem="2Cb-hd-jsB" firstAttribute="centerX" secondItem="I6M-dM-85D" secondAttribute="centerX" id="su5-e1-Slq"/>
                                     <constraint firstAttribute="trailing" secondItem="748-nb-lX2" secondAttribute="trailing" id="zBX-O7-NMS"/>
                                 </constraints>
                             </view>
@@ -128,6 +131,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HRZ-1D-Pwd"/>
                     <connections>
                         <outlet property="collView" destination="2Cb-hd-jsB" id="W1Y-tx-D3O"/>
                         <outlet property="pageControl" destination="uUA-2M-V9P" id="bWx-yV-1MH"/>
@@ -135,44 +139,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="137"/>
+            <point key="canvasLocation" x="884" y="136.69950738916256"/>
         </scene>
-        <!--Swipping Controller-->
-        <scene sceneID="u1N-qJ-RlL">
+        <!--Recommendation-->
+        <scene sceneID="BjK-YU-dfy">
             <objects>
-                <collectionViewController id="5mB-j3-rWR" customClass="SwippingController" customModule="HandySousChef" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="G7D-xT-DnA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <viewController storyboardIdentifier="Recommendation" id="d2j-N1-NTS" customClass="Recommendation" customModule="HandySousChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kay-hg-kcL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hOe-Jp-ACf">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4RR-AO-Bqd">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QOg-wh-2CQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="5mB-j3-rWR" id="U3Q-H7-qsQ"/>
-                            <outlet property="delegate" destination="5mB-j3-rWR" id="K4e-cN-A31"/>
-                        </connections>
-                    </collectionView>
-                    <connections>
-                        <outlet property="collView" destination="G7D-xT-DnA" id="c1G-Kp-vki"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Glz-iK-eAT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="scM-Yw-P49"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7U-hB-A2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828" y="137"/>
+            <point key="canvasLocation" x="1580" y="136.69950738916256"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="T15-Eb-6cO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m3n-3t-nCW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j0W-YY-P0b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mmK-I1-u7j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWG-Ya-0BM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-58.399999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
 </document>

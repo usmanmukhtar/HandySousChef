@@ -20,10 +20,14 @@ class MealCollectionViewCell: UICollectionViewCell {
     }
     
     @IBOutlet weak fileprivate var imgMeal: UIImageView!
+    @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak fileprivate var lblMeal: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+        viewContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width).isActive = true
     }
 
 }

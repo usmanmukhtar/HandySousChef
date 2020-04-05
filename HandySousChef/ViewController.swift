@@ -30,8 +30,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.collView.register(UINib(nibName: "MealCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MealCollectionViewCell")
         collView.isPagingEnabled = true
+        if let flowLayout = collView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
+        }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @IBAction func btnSubmit(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Recommendation") as! Recommendation
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
     @IBAction func btnNext(_ sender: Any) {
         let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
         let indexPath = IndexPath(item: nextIndex, section: 0)
@@ -39,9 +58,9 @@ class ViewController: UIViewController {
         collView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     @IBAction func btnPrev(_ sender: Any) {
-        let prevIndex = max(pageControl.currentPage - 1, 0)
-        let indexPath = IndexPath(item: prevIndex, section: 0)
-        pageControl.currentPage = prevIndex
+        let nextIndex = max(pageControl.currentPage - 1, 0)
+        let indexPath = IndexPath(item: nextIndex, section: 0)
+        pageControl.currentPage = nextIndex
         collView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
@@ -65,6 +84,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collView.frame.width, height: collView.frame.height)
+        return CGSize(width: UIScreen.main.bounds.size.width, height: collView.frame.height)
     }
 }
