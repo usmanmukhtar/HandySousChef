@@ -144,7 +144,6 @@
         <!--Recommendation-->
         <scene sceneID="BjK-YU-dfy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W7U-hB-A2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Recommendation" id="d2j-N1-NTS" customClass="Recommendation" customModule="HandySousChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kay-hg-kcL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -153,7 +152,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jw0-Tc-2w4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="30" minimumInteritemSpacing="30" id="D1d-79-dVs">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="30" id="D1d-79-dVs">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -176,6 +175,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Jw0-Tc-2w4" secondAttribute="bottom" id="7bP-vI-KsD"/>
                             <constraint firstItem="Jw0-Tc-2w4" firstAttribute="leading" secondItem="scM-Yw-P49" secondAttribute="leading" id="8uq-2L-BIf"/>
@@ -186,8 +186,54 @@
                     </view>
                     <connections>
                         <outlet property="collView" destination="Jw0-Tc-2w4" id="Acz-2x-hIC"/>
+                        <outlet property="playerView" destination="ZBd-lz-hJm" id="VYl-iW-Mkv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7U-hB-A2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="ZBd-lz-hJm" customClass="PlayerView" customModule="HandySousChef" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qq-cc-awB">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="c3U-6D-IZo" appends="YES" id="nYk-pr-Zch"/>
+                            </connections>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gG-Jd-ddf">
+                            <rect key="frame" x="20" y="20" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="dBJ-ab-ba9"/>
+                                <constraint firstAttribute="width" constant="30" id="faY-di-Y62"/>
+                            </constraints>
+                            <state key="normal" image="minimize"/>
+                            <connections>
+                                <action selector="minimize:" destination="ZBd-lz-hJm" eventType="touchUpInside" id="E41-oy-USj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8Qq-cc-awB" secondAttribute="trailing" id="4ut-wq-wCJ"/>
+                        <constraint firstItem="1gG-Jd-ddf" firstAttribute="top" secondItem="ZBd-lz-hJm" secondAttribute="top" constant="20" id="7jZ-an-hEE"/>
+                        <constraint firstItem="8Qq-cc-awB" firstAttribute="top" secondItem="ZBd-lz-hJm" secondAttribute="top" id="DZa-CI-Pzn"/>
+                        <constraint firstItem="1gG-Jd-ddf" firstAttribute="leading" secondItem="ZBd-lz-hJm" secondAttribute="leading" constant="20" id="EI5-2R-5m6"/>
+                        <constraint firstItem="8Qq-cc-awB" firstAttribute="width" secondItem="8Qq-cc-awB" secondAttribute="height" multiplier="16:9" id="Myr-Bp-FQn"/>
+                        <constraint firstItem="8Qq-cc-awB" firstAttribute="leading" secondItem="ZBd-lz-hJm" secondAttribute="leading" id="o3n-bh-aUI"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="RqS-GS-02C"/>
+                    <connections>
+                        <outlet property="minimizeButton" destination="1gG-Jd-ddf" id="Rdk-bM-KkT"/>
+                        <outlet property="player" destination="8Qq-cc-awB" id="iDq-Ch-mYZ"/>
+                    </connections>
+                </view>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="c3U-6D-IZo">
+                    <connections>
+                        <action selector="panGesture:" destination="ZBd-lz-hJm" id="bEi-dz-njc"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1579.7101449275362" y="136.60714285714286"/>
         </scene>
@@ -202,6 +248,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="playerView" destination="ZBd-lz-hJm" id="hcx-Nw-3cA"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mmK-I1-u7j"/>
                     </connections>
                 </navigationController>
@@ -209,5 +256,52 @@
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="136.69950738916256"/>
         </scene>
+        <!--Recipie Desc-->
+        <scene sceneID="wac-fJ-T7f">
+            <objects>
+                <viewController storyboardIdentifier="RecipieDesc" id="2Q9-NP-Dy7" customClass="RecipieDesc" customModule="HandySousChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O2g-YL-0i1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r62-nA-txj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-EC-rz3" customClass="WKYTPlayerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="MUm-Rx-d5g"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Azc-EC-rz3" secondAttribute="trailing" id="9mM-9b-Feo"/>
+                                    <constraint firstItem="Azc-EC-rz3" firstAttribute="top" secondItem="r62-nA-txj" secondAttribute="top" id="ZnW-8t-P5a"/>
+                                    <constraint firstItem="Azc-EC-rz3" firstAttribute="leading" secondItem="r62-nA-txj" secondAttribute="leading" id="cDt-YH-o7B"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r62-nA-txj" firstAttribute="leading" secondItem="1sH-q7-bzH" secondAttribute="leading" id="CEv-iu-Ag7"/>
+                            <constraint firstItem="r62-nA-txj" firstAttribute="top" secondItem="1sH-q7-bzH" secondAttribute="top" id="HUZ-Rr-NKs"/>
+                            <constraint firstItem="1sH-q7-bzH" firstAttribute="trailing" secondItem="r62-nA-txj" secondAttribute="trailing" id="dQM-AB-OIz"/>
+                            <constraint firstItem="1sH-q7-bzH" firstAttribute="bottom" secondItem="r62-nA-txj" secondAttribute="bottom" id="gGF-Bw-LkF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1sH-q7-bzH"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="Azc-EC-rz3" id="Ecj-Ol-jYi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cc-EK-CdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2267" y="137"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="minimize" width="20" height="10"/>
+    </resources>
 </document>

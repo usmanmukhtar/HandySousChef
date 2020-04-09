@@ -9,6 +9,10 @@
 import UIKit
 
 class RecommendationCollectionViewCell: UICollectionViewCell {
+    
+    var isBtnCloseTapped = false
+    private var initialFrame: CGRect?
+    private var initialCornerRadius: CGFloat?
 
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var imgTumbNail: UIImageView!
@@ -23,10 +27,8 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
         viewContainer.insertSubview(blurView, at: 0)
         
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
-        viewContainer.widthAnchor.constraint(equalToConstant: (UIScreen.main.bounds.size.width - 40 )).isActive = true
         mainView.layer.cornerRadius = 25
         mainView.clipsToBounds = true
-        
         
         NSLayoutConstraint.activate([
         blurView.heightAnchor.constraint(equalTo: viewContainer.heightAnchor),

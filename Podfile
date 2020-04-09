@@ -7,7 +7,9 @@ target 'HandySousChef' do
 
   # Pods for HandySousChef
 
-  pod 'AnimatedCollectionViewLayout'
+  pod 'youtube-ios-player-helper', '~> 0.1'
+  pod "YoutubePlayer-in-WKWebView", "~> 0.2.0"
+#  pod 'InlineYoutubeView'
 
   target 'HandySousChefTests' do
     inherit! :search_paths

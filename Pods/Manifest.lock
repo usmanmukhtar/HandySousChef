@@ -1,16 +1,20 @@
 PODS:
-  - AnimatedCollectionViewLayout (1.0.1)
+  - youtube-ios-player-helper (0.1.6)
+  - YoutubePlayer-in-WKWebView (0.2.5)
 
 DEPENDENCIES:
-  - AnimatedCollectionViewLayout
+  - youtube-ios-player-helper (~> 0.1)
+  - YoutubePlayer-in-WKWebView (~> 0.2.0)
 
 SPEC REPOS:
   trunk:
-    - AnimatedCollectionViewLayout
+    - youtube-ios-player-helper
+    - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
-  AnimatedCollectionViewLayout: 00f0997fd26f0fd02d8b99765023b95570b5d826
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
+  YoutubePlayer-in-WKWebView: 4dad12b3ece938a6456fa4374df78942f88b485a
 
-PODFILE CHECKSUM: f73586b9b6f4efb0f726d68e1c1cfb6d0028e714
+PODFILE CHECKSUM: fd5981615f3f8851719fa0f7ecf0b18c725a2e52
 
 COCOAPODS: 1.8.4
