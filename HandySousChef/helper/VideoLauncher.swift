@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YoutubePlayer_in_WKWebView
 
 enum stateOfVC {
     case minimized
@@ -31,10 +32,12 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var player: UIView!
     @IBOutlet weak var minimizeButton: UIButton!
+    @IBOutlet weak var playerView: WKYTPlayerView!
+    
+    var videoID: String! = "BVGKskYZrw8"
     var delegate: PlayerVCDelegate?
     var state = stateOfVC.hidden
     var direction = Direction.none
-    
     
     //MARK: Methods
     func customization() {
@@ -74,6 +77,7 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
         self.state = .fullScreen
         self.delegate?.didmaximize()
         self.animate()
+        playerView.load(withVideoId: videoID)
     }
     
     @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
@@ -128,44 +132,5 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
-    }
-}
-
-class VideoLauncher: NSObject{
-    
-    func showVideoPlayer(){
-        
-        if let keyWindow = UIApplication.shared.keyWindow {
-            let view = UIView(frame: keyWindow.frame)
-            view.backgroundColor = UIColor.white
-            
-            view.frame = CGRect(x: keyWindow.frame.width - 10, y: keyWindow.frame.height - 10,
-                                width: 10, height: 10)
-            
-            let height = keyWindow.frame.width * 9 / 16
-            let videoPlayerFrame = CGRect(x: 0, y: 0, width: keyWindow.frame.width, height: height)
-            let videoId = "kHU8sdqxmKA"
-
-            let webV:UIWebView = UIWebView(frame: videoPlayerFrame)
-//            let videoEmbedString = "<iframe width=\" \(keyWindow.frame.width) \" height=\" \(height) \" src=\"  \" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"></iframe>"
-            let url = URL(string: "https://www.youtube.com/embed/\(videoId)")
-//            webV.loadHTMLString(videoEmbedString, baseURL: nil)
-            webV.loadRequest(URLRequest(url: url!))
-            webV.delegate = self as? UIWebViewDelegate;
-//            let videoPlayerView = VideoPlayerView(frame: videoPlayerFrame)
-            view.addSubview(webV)
-            
-            
-            
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut,
-                           animations:
-                                    {
-                                        view.frame = keyWindow.frame
-                                    }, completion: { (completedAnimation) in
-                                        UIApplication.shared.setStatusBarHidden(true, with: .fade)
-                                    })
-            keyWindow.addSubview(view)
-            
-        }
     }
 }

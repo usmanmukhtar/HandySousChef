@@ -8,18 +8,17 @@
 
 import Foundation
 import UIKit
-import YoutubePlayer_in_WKWebView
 
 class RecipieDesc: UIViewController {
     
     var videoID: String! = "BVGKskYZrw8"
     
-    @IBOutlet weak var playerView: WKYTPlayerView!
+//    @IBOutlet weak var playerView: WKYTPlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playerView.load(withVideoId: videoID)
+//        playerView.load(withVideoId: videoID)
     }
     
 }

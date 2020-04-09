@@ -196,8 +196,20 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qq-cc-awB">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-EC-rz3" customClass="WKYTPlayerView">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstItem="Azc-EC-rz3" firstAttribute="top" secondItem="8Qq-cc-awB" secondAttribute="top" id="7VJ-Bd-mBr"/>
+                                <constraint firstAttribute="bottom" secondItem="Azc-EC-rz3" secondAttribute="bottom" id="TcC-Zy-ZC4"/>
+                                <constraint firstItem="Azc-EC-rz3" firstAttribute="leading" secondItem="8Qq-cc-awB" secondAttribute="leading" id="j1V-Rm-vSW"/>
+                                <constraint firstAttribute="trailing" secondItem="Azc-EC-rz3" secondAttribute="trailing" id="yTA-NH-22q"/>
+                            </constraints>
                             <connections>
                                 <outletCollection property="gestureRecognizers" destination="c3U-6D-IZo" appends="YES" id="nYk-pr-Zch"/>
                             </connections>
@@ -227,6 +239,7 @@
                     <connections>
                         <outlet property="minimizeButton" destination="1gG-Jd-ddf" id="Rdk-bM-KkT"/>
                         <outlet property="player" destination="8Qq-cc-awB" id="iDq-Ch-mYZ"/>
+                        <outlet property="playerView" destination="Azc-EC-rz3" id="WMo-ax-Z6A"/>
                     </connections>
                 </view>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="c3U-6D-IZo">
@@ -266,21 +279,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r62-nA-txj">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-EC-rz3" customClass="WKYTPlayerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="MUm-Rx-d5g"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Azc-EC-rz3" secondAttribute="trailing" id="9mM-9b-Feo"/>
-                                    <constraint firstItem="Azc-EC-rz3" firstAttribute="top" secondItem="r62-nA-txj" secondAttribute="top" id="ZnW-8t-P5a"/>
-                                    <constraint firstItem="Azc-EC-rz3" firstAttribute="leading" secondItem="r62-nA-txj" secondAttribute="leading" id="cDt-YH-o7B"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -292,9 +291,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1sH-q7-bzH"/>
                     </view>
-                    <connections>
-                        <outlet property="playerView" destination="Azc-EC-rz3" id="Ecj-Ol-jYi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cc-EK-CdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

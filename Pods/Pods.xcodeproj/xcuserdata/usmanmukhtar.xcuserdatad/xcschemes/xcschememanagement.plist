@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>InlineYoutubeView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-HandySousChef-HandySousChefUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
