@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>InlineYoutubeView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-HandySousChef-HandySousChefUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,11 +20,6 @@
 			<false/>
 		</dict>
 		<key>YoutubePlayer-in-WKWebView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>youtube-ios-player-helper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

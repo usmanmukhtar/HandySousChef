@@ -33,7 +33,13 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     @IBOutlet weak var player: UIView!
     @IBOutlet weak var minimizeButton: UIButton!
     @IBOutlet weak var playerView: WKYTPlayerView!
+    @IBOutlet weak var Notes: UITableView!
     
+    
+    var steps: [String] = ["add suger", "add milk", "add tea"]
+    var stepsCount = 1
+    var ingredientsCount = 1
+    var ingredients: [String] = ["add suger", "add milk", "add tea"]
     var videoID: String! = "BVGKskYZrw8"
     var delegate: PlayerVCDelegate?
     var state = stateOfVC.hidden
@@ -128,6 +134,7 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.customization()
+        self.setupUI()
     }
     
     deinit {

@@ -225,18 +225,31 @@
                                 <action selector="minimize:" destination="ZBd-lz-hJm" eventType="touchUpInside" id="E41-oy-USj"/>
                             </connections>
                         </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kto-eH-bSc">
+                            <rect key="frame" x="0.0" y="211" width="375" height="456"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="d2j-N1-NTS" id="6FC-qN-Gdw"/>
+                                <outlet property="delegate" destination="d2j-N1-NTS" id="rd8-Fe-EMX"/>
+                            </connections>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="Kto-eH-bSc" firstAttribute="trailing" secondItem="ZBd-lz-hJm" secondAttribute="trailing" id="0bd-fm-8Wu"/>
+                        <constraint firstItem="Kto-eH-bSc" firstAttribute="leading" secondItem="RqS-GS-02C" secondAttribute="leading" id="4ez-Mu-dl6"/>
                         <constraint firstAttribute="trailing" secondItem="8Qq-cc-awB" secondAttribute="trailing" id="4ut-wq-wCJ"/>
                         <constraint firstItem="1gG-Jd-ddf" firstAttribute="top" secondItem="ZBd-lz-hJm" secondAttribute="top" constant="20" id="7jZ-an-hEE"/>
                         <constraint firstItem="8Qq-cc-awB" firstAttribute="top" secondItem="ZBd-lz-hJm" secondAttribute="top" id="DZa-CI-Pzn"/>
                         <constraint firstItem="1gG-Jd-ddf" firstAttribute="leading" secondItem="ZBd-lz-hJm" secondAttribute="leading" constant="20" id="EI5-2R-5m6"/>
                         <constraint firstItem="8Qq-cc-awB" firstAttribute="width" secondItem="8Qq-cc-awB" secondAttribute="height" multiplier="16:9" id="Myr-Bp-FQn"/>
+                        <constraint firstItem="Kto-eH-bSc" firstAttribute="bottom" secondItem="RqS-GS-02C" secondAttribute="bottom" id="hHD-zC-nDz"/>
+                        <constraint firstItem="Kto-eH-bSc" firstAttribute="top" secondItem="8Qq-cc-awB" secondAttribute="bottom" id="nEO-O1-oKr"/>
                         <constraint firstItem="8Qq-cc-awB" firstAttribute="leading" secondItem="ZBd-lz-hJm" secondAttribute="leading" id="o3n-bh-aUI"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="RqS-GS-02C"/>
                     <connections>
+                        <outlet property="Notes" destination="Kto-eH-bSc" id="anU-VE-VWF"/>
                         <outlet property="minimizeButton" destination="1gG-Jd-ddf" id="Rdk-bM-KkT"/>
                         <outlet property="player" destination="8Qq-cc-awB" id="iDq-Ch-mYZ"/>
                         <outlet property="playerView" destination="Azc-EC-rz3" id="WMo-ax-Z6A"/>
