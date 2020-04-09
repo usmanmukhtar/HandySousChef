@@ -37,8 +37,6 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     
     
     var steps: [String] = ["add suger", "add milk", "add tea"]
-    var stepsCount = 1
-    var ingredientsCount = 1
     var ingredients: [String] = ["add suger", "add milk", "add tea"]
     var videoID: String! = "BVGKskYZrw8"
     var delegate: PlayerVCDelegate?

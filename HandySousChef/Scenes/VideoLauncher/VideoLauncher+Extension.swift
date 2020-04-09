@@ -53,8 +53,7 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         title.translatesAutoresizingMaskIntoConstraints = false
         title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         title.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
-        
-        
+
         switch section {
         case 0:
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "NotesHeader") as! NotesHeader
@@ -74,9 +73,9 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 0
         case 1:
-            return 2
+            return ingredients.count
         case 2:
-            return 3
+            return steps.count
         default:
             return 0
         }
@@ -90,16 +89,56 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1 // last row
-        if lastRowIndex == indexPath.row && indexPath.section == 1 {
-            insertNewRow(lastRowIndex: lastRowIndex, section: indexPath.section)
+        if lastRowIndex == indexPath.row {
+            insertNewRow(section: indexPath.section)
         }
     }
     
-    func insertNewRow(lastRowIndex: Int, section: Int) {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteRow(indexPath: indexPath)
+        }
+    }
+    
+    func insertNewRow(section: Int) {
+        var count = 0
         
-        let indexPath = IndexPath(row: (lastRowIndex + 1), section: section)
+        if section == 1 {
+            ingredients.append("")
+            count = ingredients.count
+        }else if section == 2 {
+            steps.append("")
+            count = steps.count
+        }
+        
+        let indexPath = IndexPath(row: (count - 1), section: section)
         Notes.beginUpdates()
         Notes.insertRows(at: [indexPath], with: .left)
         Notes.endUpdates()
+    }
+    
+    func deleteRow(indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            ingredients.remove(at: indexPath.row)
+            
+        }
+        else if indexPath.section == 2 {
+            steps.remove(at: indexPath.row)
+        }
+        
+        Notes.beginUpdates()
+        Notes.deleteRows(at: [indexPath], with: .right)
+        Notes.endUpdates()
+        
+        if ingredients.isEmpty {
+            insertNewRow(section: 1)
+        }
+        else if steps.isEmpty {
+            insertNewRow(section: 2)
+        }
     }
 }
