@@ -8,10 +8,19 @@
 
 import UIKit
 
-class NotesCell: UITableViewCell {
+protocol GrowingCellProtocol: class {
+    func updateHeightOfRow(_ cell: NotesCell, _ textView: UITextView)
+}
 
+class NotesCell: UITableViewCell, UITextViewDelegate {
+    
+    weak var cellDelegate: GrowingCellProtocol?
+    
+    @IBOutlet weak public var textViewNotes: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        textViewNotes.delegate = self
         // Initialization code
     }
 
@@ -19,6 +28,12 @@ class NotesCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        if let deletate = cellDelegate {
+            deletate.updateHeightOfRow(self, textView)
+        }
     }
     
 }

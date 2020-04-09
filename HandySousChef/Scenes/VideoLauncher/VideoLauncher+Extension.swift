@@ -25,7 +25,7 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -83,11 +83,16 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
-        
+        cell.cellDelegate = self
+        cell.textViewNotes.isUserInteractionEnabled = false
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        cell.accessoryType = .checkmark
         let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1 // last row
         if lastRowIndex == indexPath.row {
             insertNewRow(section: indexPath.section)
@@ -139,6 +144,22 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         }
         else if steps.isEmpty {
             insertNewRow(section: 2)
+        }
+    }
+}
+
+extension PlayerView: GrowingCellProtocol {
+    func updateHeightOfRow(_ cell: NotesCell, _ textView: UITextView) {
+        let size = textView.bounds.size
+        let newSize = Notes.sizeThatFits(CGSize(width: size.width, height: CGFloat.greatestFiniteMagnitude))
+        if size.height != newSize.height {
+            UIView.setAnimationsEnabled(false)
+            Notes?.beginUpdates()
+            Notes?.endUpdates()
+            UIView.setAnimationsEnabled(true)
+            if let thisIndexPath = Notes.indexPath(for: cell) {
+                Notes.scrollToRow(at: thisIndexPath, at: .bottom, animated: false)
+            }
         }
     }
 }
