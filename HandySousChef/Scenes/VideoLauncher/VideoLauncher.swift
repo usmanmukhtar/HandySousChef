@@ -35,9 +35,8 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     @IBOutlet weak var playerView: WKYTPlayerView!
     @IBOutlet weak var Notes: UITableView!
     
-    
-    var steps: [String] = ["add suger", "add milk", "add tea"]
-    var ingredients: [String] = ["add suger", "add milk", "add tea"]
+    var steps: [Steps] = []
+    var ingredients: [Ingredients] = []
     var videoID: String! = "BVGKskYZrw8"
     var delegate: PlayerVCDelegate?
     var state = stateOfVC.hidden
@@ -137,5 +136,25 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+}
+
+class Steps {
+    var name = ""
+    var checked = false
+    
+    convenience init (name: String){
+        self.init()
+        self.name = name
+    }
+}
+
+class Ingredients {
+    var name = ""
+    var checked = false
+    
+    convenience init (name: String){
+        self.init()
+        self.name = name
     }
 }

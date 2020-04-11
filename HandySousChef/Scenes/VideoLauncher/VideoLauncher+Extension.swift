@@ -14,6 +14,8 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     func setupUI(){
         self.Notes.dataSource = self
         self.Notes.delegate = self
+        steps.append(Steps(name: ""))
+        ingredients.append(Ingredients(name: ""))
         registerTVC()
     }
     
@@ -84,20 +86,33 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
         cell.cellDelegate = self
-        cell.textViewNotes.isUserInteractionEnabled = false
+        cell.textViewNotes.text = (indexPath.section == 1 ? ingredients[indexPath.row].name : (indexPath.section == 2 ? steps[indexPath.row].name : ""))
+        
+        let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1 // last row
+        if lastRowIndex == indexPath.row {
+            cell.btnAdd.alpha = 1
+            cell.btnAdd.tag = indexPath.section
+            cell.btnAdd.addTarget(self, action: #selector(onbtnAdd), for: .touchUpInside)
+        }else{
+            cell.btnAdd.alpha = 0
+        }
+        
+        cell.indexPath = indexPath.row
+        cell.section = indexPath.section
+        cell.steps = steps
+        cell.ingredients = ingredients
+        if steps[indexPath.row].checked && indexPath.section == 2{
+            cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxFILLED"), for: .normal)
+        } else if ingredients[indexPath.row].checked && indexPath.section == 1{
+            cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxFILLED"), for: .normal)
+        } else {
+            cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxOUTLINE"), for: .normal)
+        }
+
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        
-        guard let cell = tableView.cellForRow(at: indexPath) else { return }
-        cell.accessoryType = .checkmark
-        let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1 // last row
-        if lastRowIndex == indexPath.row {
-            insertNewRow(section: indexPath.section)
-        }
-    }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
@@ -109,21 +124,28 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    @objc func onbtnAdd(_ sender: UIButton){
+        insertNewRow(section: sender.tag)
+    }
+    
     func insertNewRow(section: Int) {
         var count = 0
         
         if section == 1 {
-            ingredients.append("")
+            ingredients.append(Ingredients(name: ""))
             count = ingredients.count
         }else if section == 2 {
-            steps.append("")
+            steps.append(Steps(name: ""))
             count = steps.count
         }
         
-        let indexPath = IndexPath(row: (count - 1), section: section)
+        var indexPath = IndexPath(row: (count - 1), section: section)
         Notes.beginUpdates()
         Notes.insertRows(at: [indexPath], with: .left)
         Notes.endUpdates()
+        self.scrollToBottom(indexPath)
+        indexPath.row -= 1
+        Notes.reloadRows(at: [(indexPath)], with: .left)
     }
     
     func deleteRow(indexPath: IndexPath) {
@@ -146,6 +168,14 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
             insertNewRow(section: 2)
         }
     }
+    
+    func scrollToBottom(_ indexPath: IndexPath)
+    {
+
+        if indexPath.row > 0 {
+            Notes.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+        }
+    }
 }
 
 extension PlayerView: GrowingCellProtocol {
@@ -161,5 +191,14 @@ extension PlayerView: GrowingCellProtocol {
                 Notes.scrollToRow(at: thisIndexPath, at: .bottom, animated: false)
             }
         }
+    }
+    
+    func onbtnCheckbox(checked: Bool, index: Int, section: Int) {
+        if section == 1 {
+            ingredients[index].checked = checked
+        } else if section == 2 {
+            steps[index].checked = checked
+        }
+        Notes.reloadData()
     }
 }

@@ -16,26 +16,56 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Enter Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s5a-VC-eQe">
-                        <rect key="frame" x="10" y="0.0" width="300" height="68"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aR-O8-iiZ">
+                        <rect key="frame" x="15" y="21.5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="LSf-4u-IAZ"/>
+                            <constraint firstAttribute="width" secondItem="2aR-O8-iiZ" secondAttribute="height" multiplier="1:1" id="h0b-yl-kXE"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="checkBoxOUTLINE "/>
+                        <connections>
+                            <action selector="onbtnCheck:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1rm-wG-GZE"/>
+                        </connections>
+                    </button>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Enter Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-x0-QqP">
+                        <rect key="frame" x="45" y="5" width="230" height="58"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes" keyboardAppearance="alert" returnKeyType="done"/>
                     </textView>
+                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIu-I6-OUu">
+                        <rect key="frame" x="280" y="22" width="25" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="6Vq-z2-EXf"/>
+                            <constraint firstAttribute="width" secondItem="SIu-I6-OUu" secondAttribute="height" multiplier="1:1" id="FXZ-jX-skZ"/>
+                        </constraints>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <state key="normal" backgroundImage="plus.circle.fill" catalog="system"/>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="s5a-VC-eQe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="GhO-Qz-Ffk"/>
-                    <constraint firstAttribute="trailing" secondItem="s5a-VC-eQe" secondAttribute="trailing" constant="10" id="SNW-Qj-bRF"/>
-                    <constraint firstItem="s5a-VC-eQe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="g7f-wL-WbV"/>
-                    <constraint firstAttribute="bottom" secondItem="s5a-VC-eQe" secondAttribute="bottom" id="iRT-nd-sQR"/>
+                    <constraint firstItem="SIu-I6-OUu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="77T-Xd-jJQ"/>
+                    <constraint firstAttribute="bottom" secondItem="Bzf-x0-QqP" secondAttribute="bottom" constant="5" id="I4U-bB-Poy"/>
+                    <constraint firstItem="Bzf-x0-QqP" firstAttribute="leading" secondItem="2aR-O8-iiZ" secondAttribute="trailing" constant="5" id="SzI-Io-lJh"/>
+                    <constraint firstItem="Bzf-x0-QqP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="d4S-NS-qgr"/>
+                    <constraint firstItem="2aR-O8-iiZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="feJ-pe-B3m"/>
+                    <constraint firstItem="SIu-I6-OUu" firstAttribute="leading" secondItem="Bzf-x0-QqP" secondAttribute="trailing" constant="5" id="fyy-k8-gHm"/>
+                    <constraint firstAttribute="trailing" secondItem="SIu-I6-OUu" secondAttribute="trailing" constant="15" id="ktU-iX-2HQ"/>
+                    <constraint firstItem="2aR-O8-iiZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="r2A-RE-MOa"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="textViewNotes" destination="s5a-VC-eQe" id="WW1-n6-Le4"/>
+                <outlet property="btnAdd" destination="SIu-I6-OUu" id="RiJ-8T-a1G"/>
+                <outlet property="btnCheck" destination="2aR-O8-iiZ" id="arh-V0-GJV"/>
+                <outlet property="textViewNotes" destination="Bzf-x0-QqP" id="g1M-04-McT"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="160.04464285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="checkBoxOUTLINE " width="22" height="22"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
