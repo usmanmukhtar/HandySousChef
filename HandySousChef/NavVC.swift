@@ -102,8 +102,8 @@ class NavVC: UINavigationController, PlayerVCDelegate  {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if let window = UIApplication.shared.keyWindow {
-            window.addSubview(self.playerView)
-        }
+//        if let window = UIApplication.shared.keyWindow {
+        UIWindow().addSubview(self.playerView)
+//        }
     }
 }

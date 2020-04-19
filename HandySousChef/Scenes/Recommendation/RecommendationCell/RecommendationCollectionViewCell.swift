@@ -14,26 +14,29 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
     private var initialFrame: CGRect?
     private var initialCornerRadius: CGFloat?
 
+    @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var imgTumbNail: UIImageView!
     @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var lblChannel: UILabel!
+    @IBOutlet weak var btnYoutube: UIButton!
+    @IBOutlet weak var imgThumbNailHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.translatesAutoresizingMaskIntoConstraints = false
-        viewContainer.insertSubview(blurView, at: 0)
         
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
         mainView.layer.cornerRadius = 25
         mainView.clipsToBounds = true
         
-        NSLayoutConstraint.activate([
-        blurView.heightAnchor.constraint(equalTo: viewContainer.heightAnchor),
-        blurView.widthAnchor.constraint(equalTo: viewContainer.widthAnchor),
-        ])
+        self.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
+        self.layer.shadowOffset = CGSize(width: -10, height: -10)
+        self.layer.shadowRadius = 25
+        self.layer.shadowOpacity = 0.5
+        self.layer.masksToBounds = false
+        
+        imgThumbNailHeight.constant = self.mainView.frame.size.width / 480 * 360
+//        imgThumbNail.layoutIfNeeded()
     }
 
 }

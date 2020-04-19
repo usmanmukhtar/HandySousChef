@@ -86,6 +86,16 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
         cell.cellDelegate = self
+//        if indexPath.section == 1 {
+//            if cell.textViewNotes.text != ingredients[indexPath.row].name {
+//                ingredients[indexPath.row].name = cell.textViewNotes.text
+//            }
+//        } else if indexPath.section == 2 {
+//            if cell.textViewNotes.text != steps[indexPath.row].name {
+//                ingredients[indexPath.row].name = cell.textViewNotes.text
+//            }
+//        }
+        
         cell.textViewNotes.text = (indexPath.section == 1 ? ingredients[indexPath.row].name : (indexPath.section == 2 ? steps[indexPath.row].name : ""))
         
         let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1 // last row
@@ -101,13 +111,6 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         cell.section = indexPath.section
         cell.steps = steps
         cell.ingredients = ingredients
-        if steps[indexPath.row].checked && indexPath.section == 2{
-            cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxFILLED"), for: .normal)
-        } else if ingredients[indexPath.row].checked && indexPath.section == 1{
-            cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxFILLED"), for: .normal)
-        } else {
-            cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxOUTLINE"), for: .normal)
-        }
 
         
         return cell
@@ -143,9 +146,10 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         Notes.beginUpdates()
         Notes.insertRows(at: [indexPath], with: .left)
         Notes.endUpdates()
-        self.scrollToBottom(indexPath)
         indexPath.row -= 1
         Notes.reloadRows(at: [(indexPath)], with: .left)
+        self.scrollToBottom(indexPath)
+        
     }
     
     func deleteRow(indexPath: IndexPath) {
@@ -173,7 +177,7 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     {
 
         if indexPath.row > 0 {
-            Notes.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.bottom, animated: true)
+            Notes.scrollToRow(at: indexPath as IndexPath, at: UITableView.ScrollPosition.top, animated: true)
         }
     }
 }

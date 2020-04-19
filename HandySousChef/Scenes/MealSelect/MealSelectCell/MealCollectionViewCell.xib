@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lec-0G-tcq">
-                                <rect key="frame" x="24" y="330.5" width="366" height="49.5"/>
+                                <rect key="frame" x="24" y="331" width="366" height="49"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Lorem ipsum ramdom text bla bla bla bla">
                                         <attributes>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SB-3n-5cC">
-                                <rect key="frame" x="24" y="279.5" width="366" height="41"/>
+                                <rect key="frame" x="24" y="280" width="366" height="41"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Breakfast">
                                         <attributes>
@@ -50,32 +50,40 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal-1" translatesAutoresizingMaskIntoConstraints="NO" id="0qn-hp-xtK">
-                                <rect key="frame" x="107" y="39.5" width="200" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNw-dS-Q7w">
+                                <rect key="frame" x="107" y="40" width="200" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal-1" translatesAutoresizingMaskIntoConstraints="NO" id="0qn-hp-xtK">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="6KZ-nd-pz7"/>
-                                    <constraint firstAttribute="height" priority="750" constant="200" id="SNT-RB-gqY"/>
-                                    <constraint firstAttribute="width" secondItem="0qn-hp-xtK" secondAttribute="height" multiplier="1:1" id="TIA-Tc-AeG"/>
+                                    <constraint firstAttribute="width" secondItem="zNw-dS-Q7w" secondAttribute="height" id="6dW-wu-XZT"/>
+                                    <constraint firstItem="0qn-hp-xtK" firstAttribute="top" secondItem="zNw-dS-Q7w" secondAttribute="top" id="BIv-8v-2FN"/>
+                                    <constraint firstAttribute="width" constant="200" id="Jfg-0B-maL"/>
+                                    <constraint firstItem="0qn-hp-xtK" firstAttribute="leading" secondItem="zNw-dS-Q7w" secondAttribute="leading" id="LP8-Ch-uYp"/>
+                                    <constraint firstAttribute="trailing" secondItem="0qn-hp-xtK" secondAttribute="trailing" id="W2o-h9-sYb"/>
+                                    <constraint firstAttribute="bottom" secondItem="0qn-hp-xtK" secondAttribute="bottom" id="bXB-rW-tgd"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2SB-3n-5cC" secondAttribute="trailing" constant="24" id="5Md-Ao-Trl"/>
+                            <constraint firstItem="zNw-dS-Q7w" firstAttribute="centerX" secondItem="YiU-xI-yWj" secondAttribute="centerX" id="AX2-7C-h8f"/>
                             <constraint firstItem="lec-0G-tcq" firstAttribute="top" secondItem="2SB-3n-5cC" secondAttribute="bottom" priority="750" constant="10" id="CJj-cY-SEM"/>
-                            <constraint firstItem="2SB-3n-5cC" firstAttribute="top" secondItem="0qn-hp-xtK" secondAttribute="bottom" constant="40" id="MZw-zc-kfo"/>
-                            <constraint firstItem="0qn-hp-xtK" firstAttribute="leading" secondItem="YiU-xI-yWj" secondAttribute="leading" priority="750" constant="86.5" id="NCw-8o-mW5"/>
                             <constraint firstAttribute="trailing" secondItem="lec-0G-tcq" secondAttribute="trailing" constant="24" id="NHn-YX-dqu"/>
                             <constraint firstAttribute="bottom" secondItem="lec-0G-tcq" secondAttribute="bottom" priority="750" constant="20" id="V6T-LT-YKy"/>
                             <constraint firstItem="2SB-3n-5cC" firstAttribute="leading" secondItem="YiU-xI-yWj" secondAttribute="leading" constant="24" id="a9A-KX-AoJ"/>
-                            <constraint firstItem="0qn-hp-xtK" firstAttribute="centerX" secondItem="YiU-xI-yWj" secondAttribute="centerX" id="aEa-BN-ekU"/>
-                            <constraint firstAttribute="trailing" secondItem="0qn-hp-xtK" secondAttribute="trailing" priority="750" constant="86.5" id="ef5-lh-zm8"/>
-                            <constraint firstItem="0qn-hp-xtK" firstAttribute="top" secondItem="YiU-xI-yWj" secondAttribute="top" priority="750" constant="39.5" id="svd-UG-62L"/>
+                            <constraint firstItem="zNw-dS-Q7w" firstAttribute="top" secondItem="YiU-xI-yWj" secondAttribute="top" constant="40" id="f1T-Si-chQ"/>
+                            <constraint firstItem="2SB-3n-5cC" firstAttribute="top" secondItem="zNw-dS-Q7w" secondAttribute="bottom" constant="40" id="l2K-qc-fED"/>
                             <constraint firstItem="lec-0G-tcq" firstAttribute="leading" secondItem="YiU-xI-yWj" secondAttribute="leading" constant="24" id="vlC-AJ-oOa"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="YiU-xI-yWj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="84B-yN-hWY"/>
                 <constraint firstAttribute="trailing" secondItem="YiU-xI-yWj" secondAttribute="trailing" id="RHt-ab-0GH"/>
@@ -88,6 +96,7 @@
                 <outlet property="imgMeal" destination="0qn-hp-xtK" id="7e3-vY-Tra"/>
                 <outlet property="lblMeal" destination="2SB-3n-5cC" id="R8F-cI-hZC"/>
                 <outlet property="viewContainer" destination="YiU-xI-yWj" id="9ln-XA-Gb7"/>
+                <outlet property="viewMeal" destination="zNw-dS-Q7w" id="GQV-Yj-GRF"/>
             </connections>
             <point key="canvasLocation" x="364.49275362318843" y="325.44642857142856"/>
         </collectionViewCell>

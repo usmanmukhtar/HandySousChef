@@ -21,10 +21,16 @@ class MealCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak fileprivate var imgMeal: UIImageView!
     @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var viewMeal: UIView!
     @IBOutlet weak fileprivate var lblMeal: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        viewMeal.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
+        viewMeal.layer.shadowOffset = CGSize(width: -10, height: -10)
+        viewMeal.layer.shadowRadius = 20
+        viewMeal.layer.shadowOpacity = 0.5
         
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
         viewContainer.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width).isActive = true

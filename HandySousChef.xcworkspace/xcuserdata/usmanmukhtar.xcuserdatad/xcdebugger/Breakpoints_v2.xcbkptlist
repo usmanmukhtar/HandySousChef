@@ -7,49 +7,95 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A4DB5F7F-07AC-4D14-B5C9-A0E538FD6849"
+            uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HandySousChef/Scenes/VideoLauncher/VideoLauncher+Extension.swift"
+            filePath = "HandySousChef/Scenes/Recommendation/Recommendation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "insertNewRow(section:)"
-            landmarkType = "7">
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE - b782195f247c0461"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HandySousChef.Recommendation.customization() -&gt; ()"
+                  moduleName = "HandySousChef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usmanmukhtar/Desktop/git%20clones/HandySousChef/HandySousChef/Scenes/Recommendation/Recommendation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE - b782195f247c0461"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HandySousChef.Recommendation.customization() -&gt; ()"
+                  moduleName = "HandySousChef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usmanmukhtar/Desktop/git%20clones/HandySousChef/HandySousChef/Scenes/Recommendation/Recommendation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE - b782195f247c0461"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HandySousChef.Recommendation.customization() -&gt; ()"
+                  moduleName = "HandySousChef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usmanmukhtar/Desktop/git%20clones/HandySousChef/HandySousChef/Scenes/Recommendation/Recommendation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE - b782195f247c0461"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HandySousChef.Recommendation.customization() -&gt; ()"
+                  moduleName = "HandySousChef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/usmanmukhtar/Desktop/git%20clones/HandySousChef/HandySousChef/Scenes/Recommendation/Recommendation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AA71416B-6986-468E-A63C-7B842C471EC7"
+            uuid = "1DBEFEA0-CDA4-4B20-BCF4-3F9C2CB259CB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HandySousChef/Scenes/VideoLauncher/VideoLauncher+Extension.swift"
+            filePath = "HandySousChef/Scenes/Recommendation/Recommendation.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
-            landmarkName = "onbtnCheckbox(checked:index:section:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "93445C6E-0023-471E-BD83-0C807BA58A67"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HandySousChef/Scenes/VideoLauncher/VideoLauncher+Extension.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

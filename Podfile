@@ -8,6 +8,11 @@ target 'HandySousChef' do
   # Pods for HandySousChef
 
   pod "YoutubePlayer-in-WKWebView", "~> 0.2.0"
+  pod 'Alamofire', '4.9.0'
+  pod 'SDWebImage', '~> 5.0'
+  pod 'IQKeyboardManagerSwift'
+  pod "SkeletonView"
+  pod 'AnimatedCollectionViewLayout'
 
   target 'HandySousChefTests' do
     inherit! :search_paths

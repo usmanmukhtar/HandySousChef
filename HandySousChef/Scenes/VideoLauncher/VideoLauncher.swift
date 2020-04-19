@@ -37,7 +37,7 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     
     var steps: [Steps] = []
     var ingredients: [Ingredients] = []
-    var videoID: String! = "BVGKskYZrw8"
+    var selectedVideo: VideoData?
     var delegate: PlayerVCDelegate?
     var state = stateOfVC.hidden
     var direction = Direction.none
@@ -76,11 +76,19 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
         self.player.transform = trasform
     }
 
-    @objc func tapPlayView()  {
+    @objc func tapPlayView(_ notification: Notification)  {
+        
+        guard let userInfo = notification.userInfo,
+            let message  = userInfo["message"] as? VideoData else {return}
+//        let videoList = notification.object as? VideoList
+        self.selectedVideo = message
+        
         self.state = .fullScreen
         self.delegate?.didmaximize()
         self.animate()
-        playerView.load(withVideoId: videoID)
+        if let vid = self.selectedVideo {
+            playerView.load(withVideoId: vid.videoId)
+        }
     }
     
     @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
@@ -133,6 +141,8 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
         self.customization()
         self.setupUI()
     }
+    
+    
     
     deinit {
         NotificationCenter.default.removeObserver(self)

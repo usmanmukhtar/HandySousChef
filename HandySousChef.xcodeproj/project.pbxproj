@@ -20,6 +20,9 @@
 		1642F794243F1D0B00527DB1 /* NotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1642F792243F1D0B00527DB1 /* NotesCell.xib */; };
 		1642F798243F1F7600527DB1 /* NotesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1642F797243F1F7600527DB1 /* NotesHeader.swift */; };
 		1642F79A243F1F9A00527DB1 /* NotesHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1642F799243F1F9A00527DB1 /* NotesHeader.xib */; };
+		16433B9C24420C8D005B25C6 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16433B9B24420C8D005B25C6 /* VideoList.swift */; };
+		16433B9F24421158005B25C6 /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16433B9E24421158005B25C6 /* VideoData.swift */; };
+		16433BA1244211C2005B25C6 /* VideoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16433BA0244211C2005B25C6 /* VideoDataModel.swift */; };
 		1653BEF22435DE140016A6C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BEF12435DE140016A6C9 /* AppDelegate.swift */; };
 		1653BEF42435DE140016A6C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BEF32435DE140016A6C9 /* SceneDelegate.swift */; };
 		1653BEF92435DE140016A6C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1653BEF72435DE140016A6C9 /* Main.storyboard */; };
@@ -28,6 +31,7 @@
 		1653BF092435DE150016A6C9 /* HandySousChefTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BF082435DE150016A6C9 /* HandySousChefTests.swift */; };
 		1653BF142435DE150016A6C9 /* HandySousChefUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BF132435DE150016A6C9 /* HandySousChefUITests.swift */; };
 		1653BF2B243612CF0016A6C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653BF2A243612CF0016A6C9 /* ViewController.swift */; };
+		1680C2AF2445D6DF00C38295 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1680C2AE2445D6DF00C38295 /* Alert.swift */; };
 		7F526E994353C60BEFBB83D6 /* Pods_HandySousChef_HandySousChefUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD674E9F593A26B3F640BF04 /* Pods_HandySousChef_HandySousChefUITests.framework */; };
 		C63BCD81B81697407A35A8CC /* Pods_HandySousChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C421F0F5267874D154BF567 /* Pods_HandySousChef.framework */; };
 		FD85306579E1248A666E4DC3 /* Pods_HandySousChefTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531A4B3A2E90AB87CCB6C3C7 /* Pods_HandySousChefTests.framework */; };
@@ -66,6 +70,9 @@
 		1642F792243F1D0B00527DB1 /* NotesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesCell.xib; sourceTree = "<group>"; };
 		1642F797243F1F7600527DB1 /* NotesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesHeader.swift; sourceTree = "<group>"; };
 		1642F799243F1F9A00527DB1 /* NotesHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotesHeader.xib; sourceTree = "<group>"; };
+		16433B9B24420C8D005B25C6 /* VideoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoList.swift; sourceTree = "<group>"; };
+		16433B9E24421158005B25C6 /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
+		16433BA0244211C2005B25C6 /* VideoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataModel.swift; sourceTree = "<group>"; };
 		1653BEEE2435DE140016A6C9 /* HandySousChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandySousChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1653BEF12435DE140016A6C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1653BEF32435DE140016A6C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +87,8 @@
 		1653BF132435DE150016A6C9 /* HandySousChefUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandySousChefUITests.swift; sourceTree = "<group>"; };
 		1653BF152435DE150016A6C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1653BF2A243612CF0016A6C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1680C2AE2445D6DF00C38295 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		1688381F2444B4FA004BEFA4 /* HandySousChef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HandySousChef.entitlements; sourceTree = "<group>"; };
 		2E6390AA4E0761AF0975528F /* Pods-HandySousChef-HandySousChefUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChef-HandySousChefUITests.release.xcconfig"; path = "Target Support Files/Pods-HandySousChef-HandySousChefUITests/Pods-HandySousChef-HandySousChefUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4A3B4150131BE0F8AB1B9AF3 /* Pods-HandySousChefTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandySousChefTests.debug.xcconfig"; path = "Target Support Files/Pods-HandySousChefTests/Pods-HandySousChefTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C421F0F5267874D154BF567 /* Pods_HandySousChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandySousChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +130,7 @@
 		1637540B24374AE40021F808 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				16433B9A24420C6E005B25C6 /* VideoList */,
 				1642F787243F0B8000527DB1 /* VideoLauncher */,
 				163EEB882439C79B0098DF3F /* Recommendation */,
 				1637540C24374AF00021F808 /* MealSelect */,
@@ -185,6 +195,24 @@
 			path = NotesCell;
 			sourceTree = "<group>";
 		};
+		16433B9A24420C6E005B25C6 /* VideoList */ = {
+			isa = PBXGroup;
+			children = (
+				16433B9D24421124005B25C6 /* helper */,
+				16433B9B24420C8D005B25C6 /* VideoList.swift */,
+			);
+			path = VideoList;
+			sourceTree = "<group>";
+		};
+		16433B9D24421124005B25C6 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				16433B9E24421158005B25C6 /* VideoData.swift */,
+				16433BA0244211C2005B25C6 /* VideoDataModel.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
 		1653BEE52435DE140016A6C9 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +238,8 @@
 		1653BEF02435DE140016A6C9 /* HandySousChef */ = {
 			isa = PBXGroup;
 			children = (
+				1680C2AD2445D6B400C38295 /* ErrorHandling */,
+				1688381F2444B4FA004BEFA4 /* HandySousChef.entitlements */,
 				1637540B24374AE40021F808 /* Scenes */,
 				1653BEF12435DE140016A6C9 /* AppDelegate.swift */,
 				1642F785243EF18A00527DB1 /* NavVC.swift */,
@@ -240,6 +270,14 @@
 				1653BF152435DE150016A6C9 /* Info.plist */,
 			);
 			path = HandySousChefUITests;
+			sourceTree = "<group>";
+		};
+		1680C2AD2445D6B400C38295 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				1680C2AE2445D6DF00C38295 /* Alert.swift */,
+			);
+			path = ErrorHandling;
 			sourceTree = "<group>";
 		};
 		5BCE9FE6710129C2C9AF6386 /* Frameworks */ = {
@@ -513,13 +551,17 @@
 				1642F78B243F0F0B00527DB1 /* VideoLauncher+Extension.swift in Sources */,
 				1653BF2B243612CF0016A6C9 /* ViewController.swift in Sources */,
 				1653BEF42435DE140016A6C9 /* SceneDelegate.swift in Sources */,
+				16433B9C24420C8D005B25C6 /* VideoList.swift in Sources */,
 				1642F786243EF18A00527DB1 /* NavVC.swift in Sources */,
 				1642F789243F0E3500527DB1 /* VideoLauncher.swift in Sources */,
 				1637541A24377E430021F808 /* MealCollectionViewCell.swift in Sources */,
 				163EEB8E243A07400098DF3F /* RecommendationCollectionViewCell.swift in Sources */,
+				16433BA1244211C2005B25C6 /* VideoDataModel.swift in Sources */,
+				16433B9F24421158005B25C6 /* VideoData.swift in Sources */,
 				163EEB8A2439C81F0098DF3F /* Recommendation.swift in Sources */,
 				1637541D243781E80021F808 /* SwippingModel.swift in Sources */,
 				1642F798243F1F7600527DB1 /* NotesHeader.swift in Sources */,
+				1680C2AF2445D6DF00C38295 /* Alert.swift in Sources */,
 				1642F793243F1D0B00527DB1 /* NotesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +737,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = HandySousChef/HandySousChef.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6WC7CXPN4;
 				INFOPLIST_FILE = HandySousChef/Info.plist;
@@ -717,6 +760,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = HandySousChef/HandySousChef.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W6WC7CXPN4;
 				INFOPLIST_FILE = HandySousChef/Info.plist;

@@ -22,7 +22,7 @@
                             <constraint firstAttribute="width" constant="25" id="LSf-4u-IAZ"/>
                             <constraint firstAttribute="width" secondItem="2aR-O8-iiZ" secondAttribute="height" multiplier="1:1" id="h0b-yl-kXE"/>
                         </constraints>
-                        <state key="normal" backgroundImage="checkBoxOUTLINE "/>
+                        <state key="normal" backgroundImage="checkBoxOUTLINE"/>
                         <connections>
                             <action selector="onbtnCheck:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1rm-wG-GZE"/>
                         </connections>
@@ -65,7 +65,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="checkBoxOUTLINE " width="22" height="22"/>
+        <image name="checkBoxOUTLINE" width="22" height="22"/>
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

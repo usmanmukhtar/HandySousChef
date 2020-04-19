@@ -7,14 +7,61 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    private func requestNotificationAuth(application: UIApplication, badge: Int?) {
+        //permissions
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "title"
+        content.body = "body"
+        
+        
+        if let badge = badge {
+            var currentBadgeCount = UIApplication.shared.applicationIconBadgeNumber
+            currentBadgeCount += badge
+            content.badge = NSNumber(value: currentBadgeCount)
+        }
+        
+        let hours = [5,9,12];
 
+        for hour in hours {
+        
+            var components = DateComponents()
+            components.hour = hour;
+            components.minute = 29;
+            components.second = 00;
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true);
+
+            let uuidString = UUID().uuidString
+            let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+
+            center.add(request) { (error) in
+                if let error = error {
+                    print("Error \(error.localizedDescription)")
+                }
+            }
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        UNUserNotificationCenter.current().delegate = self
+        requestNotificationAuth(application: application, badge: 1)
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         return true
     }
@@ -34,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
@@ -44,3 +91,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+           completionHandler([.badge, .sound, .alert])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        let indentifier = response.actionIdentifier
+       
+       switch indentifier {
+       case UNNotificationDismissActionIdentifier:
+           print("Notification was dismissed")
+           completionHandler()
+           
+       case UNNotificationDefaultActionIdentifier:
+            print("User opened the app from the notification")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NotificationTap"), object: nil)  
+            completionHandler()
+       default:
+           print("The default case is called")
+           completionHandler()
+       }
+    }
+}
