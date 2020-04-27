@@ -12,7 +12,12 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    //MARK:- Variable Declaration
+    var navigationC: UINavigationController?
+    var window: UIWindow?
 
+    //MARK:- Method Decleration
     private func requestNotificationAuth(application: UIApplication, badge: Int?) {
         //permissions
         let center = UNUserNotificationCenter.current()
@@ -22,11 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
         let content = UNMutableNotificationContent()
-        content.title = "title"
-        content.body = "body"
-        
         
         if let badge = badge {
             var currentBadgeCount = UIApplication.shared.applicationIconBadgeNumber
@@ -34,13 +35,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             content.badge = NSNumber(value: currentBadgeCount)
         }
         
-        let hours = [5,9,12];
+        let contentData = [
+            [5, "Breakfast Time", "Checkout these breakfast meals!", 0],
+            [10, "Lunch Time", "Checkout these lunch meals!", 1],
+            [19, "Dinner Time", "Checkout these dinner meals!", 2]
+        ];
 
-        for hour in hours {
-        
+        for data in contentData {
+
+            content.title = data[1] as! String
+            content.body = data[2] as! String
+            content.userInfo = ["id": data[3] as! Int]
+            content.sound = UNNotificationSound.default
+            
             var components = DateComponents()
-            components.hour = hour;
-            components.minute = 29;
+            components.hour = data[0] as? Int;
+            components.minute = 00;
             components.second = 00;
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true);
@@ -99,20 +109,37 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
+        let userInfo = response.notification.request.content.userInfo
         let indentifier = response.actionIdentifier
        
-       switch indentifier {
-       case UNNotificationDismissActionIdentifier:
-           print("Notification was dismissed")
-           completionHandler()
-           
-       case UNNotificationDefaultActionIdentifier:
-            print("User opened the app from the notification")
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "NotificationTap"), object: nil)  
-            completionHandler()
-       default:
-           print("The default case is called")
-           completionHandler()
-       }
+        switch indentifier {
+           case UNNotificationDismissActionIdentifier:
+               print("Notification was dismissed")
+               completionHandler()
+               
+           case UNNotificationDefaultActionIdentifier:
+                print("User opened the app from the notification")
+                if let customData = userInfo["id"] as? Int {
+                    print("Custom data received: \(customData)")
+                    
+                    guard let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController else {
+                       return
+                    }
+
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    if  let conversationVC = storyboard.instantiateViewController(withIdentifier: "Recommendation") as? Recommendation,
+                       let navController = rootViewController as? UINavigationController {
+
+                            conversationVC.message = customData
+                           
+                           navController.pushViewController(conversationVC, animated: true)
+                    }
+                }
+                
+                completionHandler()
+           default:
+               print("The default case is called")
+               completionHandler()
+        }
     }
 }

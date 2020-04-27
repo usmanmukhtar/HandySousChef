@@ -13,6 +13,7 @@ target 'HandySousChef' do
   pod 'IQKeyboardManagerSwift'
   pod "SkeletonView"
   pod 'AnimatedCollectionViewLayout'
+  pod 'SDWebImageFLPlugin'
 
   target 'HandySousChefTests' do
     inherit! :search_paths

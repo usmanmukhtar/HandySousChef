@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     SwippingModel(imageName: "meal-2", mealName: "Lunch"),
     SwippingModel(imageName: "meal-3", mealName: "Dinner")]
     
+    let videoModel:VideoDataModel = VideoDataModel()
+    
     var mealCount = 0
     
     @IBOutlet weak var pageControl: UIPageControl!
@@ -38,12 +40,43 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    @IBAction func btnNext(_ sender: Any) {
+        let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
+        let indexPath = IndexPath(item: nextIndex, section: 0)
+        pageControl.currentPage = nextIndex
+        self.btnLowerStack.tag = pageControl.currentPage
+        collView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    @IBAction func btnPrev(_ sender: Any) {
+        let nextIndex = max(pageControl.currentPage - 1, 0)
+        let indexPath = IndexPath(item: nextIndex, section: 0)
+        pageControl.currentPage = nextIndex
+        self.btnLowerStack.tag = pageControl.currentPage
+        collView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
+    @objc func onbtnNext(_ sender: UIButton) {
         
-        //MARK: LocalNotification tap
-        NotificationCenter.default.addObserver(self,selector: #selector(NotificationTap),
-        name: NSNotification.Name(rawValue: "NotificationTap"),
-        object: nil)
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: Recommendation = storyboard.instantiateViewController(withIdentifier: "Recommendation") as! Recommendation
+        vc.message = btnLowerStack.tag
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func setupUI(){
         //btnnext action here
         self.btnLowerStack.tag = pageControl.currentPage
         self.btnLowerStack.addTarget(self, action: #selector(onbtnNext), for: .touchUpInside)
@@ -81,49 +114,7 @@ class ViewController: UIViewController {
         if let flowLayout = collView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
-    @IBAction func btnNext(_ sender: Any) {
-        let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
-        let indexPath = IndexPath(item: nextIndex, section: 0)
-        pageControl.currentPage = nextIndex
-        self.btnLowerStack.tag = pageControl.currentPage
-        collView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
-    @IBAction func btnPrev(_ sender: Any) {
-        let nextIndex = max(pageControl.currentPage - 1, 0)
-        let indexPath = IndexPath(item: nextIndex, section: 0)
-        pageControl.currentPage = nextIndex
-        self.btnLowerStack.tag = pageControl.currentPage
-        collView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
-    
-    @objc func NotificationTap(notification: NSNotification){
-      DispatchQueue.main.async
-        {
-          //Land on Recommendation ViewController
-          let storyboard = UIStoryboard(name: "Main", bundle: nil)
-          let vc: Recommendation = storyboard.instantiateViewController(withIdentifier: "Recommendation") as! Recommendation
-          self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    
-    @objc func onbtnNext(_ sender: UIButton) {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc: Recommendation = storyboard.instantiateViewController(withIdentifier: "Recommendation") as! Recommendation
-        vc.message = btnLowerStack.tag
-        self.navigationController?.pushViewController(vc, animated: true)
+       
     }
     
 }

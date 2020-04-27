@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImageFLPlugin
 
 class RecommendationCollectionViewCell: UICollectionViewCell {
     
@@ -16,7 +17,7 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var imgTumbNail: UIImageView!
+    @IBOutlet weak var imgTumbNail: SDAnimatedImageView!
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var lblChannel: UILabel!
     @IBOutlet weak var btnYoutube: UIButton!
@@ -30,12 +31,12 @@ class RecommendationCollectionViewCell: UICollectionViewCell {
         mainView.clipsToBounds = true
         
         self.layer.shadowColor = UIColor(named: "shadow-color")?.cgColor
-        self.layer.shadowOffset = CGSize(width: -10, height: -10)
-        self.layer.shadowRadius = 25
-        self.layer.shadowOpacity = 0.5
+        self.layer.shadowOffset = CGSize(width: -8, height: -8)
+        self.layer.shadowRadius = 15
+        self.layer.shadowOpacity = 0.4
         self.layer.masksToBounds = false
         
-        imgThumbNailHeight.constant = self.mainView.frame.size.width / 480 * 360
+        imgThumbNailHeight.constant = self.mainView.frame.size.width / 480 * 240
 //        imgThumbNail.layoutIfNeeded()
     }
 

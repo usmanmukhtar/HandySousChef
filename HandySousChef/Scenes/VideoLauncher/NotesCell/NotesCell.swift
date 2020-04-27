@@ -8,27 +8,27 @@
 
 import UIKit
 
-protocol GrowingCellProtocol: class {
-    func updateHeightOfRow(_ cell: NotesCell, _ textView: UITextView)
-    func onbtnCheckbox(checked: Bool, index: Int, section: Int)
+protocol ChangeBtnCheck {
+    func changebtnCheck(checked: Bool, index: Int, section: Int)
 }
 
 class NotesCell: UITableViewCell, UITextViewDelegate {
+
+    @IBOutlet weak var btnAdd: UIButton!
+    @IBOutlet weak var btnCheck: UIButton!
+    @IBOutlet weak public var textViewNotes: UILabel!
+    @IBOutlet weak var cellView: UIView!
     
-    weak var cellDelegate: GrowingCellProtocol?
-    var indexPath: Int?
+    var delegate: ChangeBtnCheck?
+    var indexP: Int?
     var section: Int?
     var steps: [Steps]?
     var ingredients: [Ingredients]?
     
-    @IBOutlet weak var btnAdd: UIButton!
-    @IBOutlet weak var btnCheck: UIButton!
-    @IBOutlet weak public var textViewNotes: UITextView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        textViewNotes.delegate = self
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,18 +37,33 @@ class NotesCell: UITableViewCell, UITextViewDelegate {
         // Configure the view for the selected state
     }
     
-    @IBAction func onbtnCheck(_ sender: Any) {
-        if steps![indexPath!].checked && section == 2{
-            cellDelegate?.onbtnCheckbox(checked: false, index: indexPath!, section: section!)
-        } else if ingredients![indexPath!].checked && section == 1 {
-            cellDelegate?.onbtnCheckbox(checked: false, index: indexPath!, section: section!)
-        } else {
-            cellDelegate?.onbtnCheckbox(checked: true, index: indexPath!, section: section!)
+    func animateSwipeHint() {
+        
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: [.curveEaseOut], animations: {
+            self.cellView.transform = CGAffineTransform(translationX: -40, y: 0)
+        }) { (success) in
+            UIView.animate(withDuration: 0.2, delay: 0, options: [.curveLinear], animations: {
+                self.cellView.transform = .identity
+            }) { (success) in
+                
+            }
         }
     }
-    func textViewDidChange(_ textView: UITextView) {
-        if let deletate = cellDelegate {
-            deletate.updateHeightOfRow(self, textView)
+    
+    
+    @IBAction func onbtnCheck(_ sender: Any) {
+        if section == 2 {
+            if steps![indexP!].checked {
+                delegate?.changebtnCheck(checked: false, index: indexP!, section: section!)
+            }else{
+                delegate?.changebtnCheck(checked: true, index: indexP!, section: section!)
+            }
+        }else if section == 1 {
+            if ingredients![indexP!].checked {
+                delegate?.changebtnCheck(checked: false, index: indexP!, section: section!)
+            }else{
+                delegate?.changebtnCheck(checked: true, index: indexP!, section: section!)
+            }
         }
     }
     

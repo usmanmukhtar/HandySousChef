@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,40 +17,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3GP-bR-Yvd">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyV-Fk-dL4">
-                            <rect key="frame" x="10" y="32.5" width="35" height="35"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="35" id="YFb-lp-6bb"/>
-                                <constraint firstAttribute="width" secondItem="iyV-Fk-dL4" secondAttribute="height" multiplier="1:1" id="wUp-ZA-F5R"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" image="square.and.arrow.down.fill" catalog="system"/>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrQ-jj-QiU">
-                            <rect key="frame" x="121" y="30.5" width="172.5" height="39.5"/>
+                            <rect key="frame" x="18" y="30.5" width="172.5" height="39.5"/>
                             <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="34"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3z-nG-27g">
-                            <rect key="frame" x="369" y="31.5" width="35" height="37"/>
+                            <rect key="frame" x="369" y="37" width="35" height="26"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="Y3z-nG-27g" secondAttribute="height" multiplier="16:17" id="2pt-o2-SLx"/>
-                                <constraint firstAttribute="width" constant="35" id="u5I-Y5-fKo"/>
+                                <constraint firstAttribute="width" secondItem="Y3z-nG-27g" secondAttribute="height" multiplier="4:3" id="1fb-Zf-GbC"/>
+                                <constraint firstAttribute="width" constant="35" id="HIt-Ob-HB9"/>
                             </constraints>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button" image="share"/>
+                            <color key="tintColor" name="componentsWLbl"/>
+                            <state key="normal" image="arrowshape.turn.up.right.fill" catalog="system"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="iyV-Fk-dL4" firstAttribute="centerY" secondItem="3GP-bR-Yvd" secondAttribute="centerY" id="6FI-wh-Jrb"/>
                         <constraint firstItem="lrQ-jj-QiU" firstAttribute="centerY" secondItem="3GP-bR-Yvd" secondAttribute="centerY" id="Jyv-p9-wZ0"/>
-                        <constraint firstItem="iyV-Fk-dL4" firstAttribute="leading" secondItem="3GP-bR-Yvd" secondAttribute="leading" constant="10" id="O2S-Zy-88O"/>
-                        <constraint firstItem="lrQ-jj-QiU" firstAttribute="centerX" secondItem="3GP-bR-Yvd" secondAttribute="centerX" id="Pec-yC-i5H"/>
                         <constraint firstAttribute="trailing" secondItem="Y3z-nG-27g" secondAttribute="trailing" constant="10" id="TcK-rO-gra"/>
                         <constraint firstItem="Y3z-nG-27g" firstAttribute="centerY" secondItem="3GP-bR-Yvd" secondAttribute="centerY" id="aIh-mv-s8I"/>
+                        <constraint firstItem="lrQ-jj-QiU" firstAttribute="leading" secondItem="3GP-bR-Yvd" secondAttribute="leading" constant="18" id="zR0-Gb-e1K"/>
                     </constraints>
                 </view>
             </subviews>
@@ -62,11 +51,16 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="RCh-Ol-5qL"/>
+            <connections>
+                <outlet property="btnshare" destination="Y3z-nG-27g" id="Ldg-XJ-C8q"/>
+            </connections>
             <point key="canvasLocation" x="129" y="-146"/>
         </view>
     </objects>
     <resources>
-        <image name="share" width="512" height="512"/>
-        <image name="square.and.arrow.down.fill" catalog="system" width="60" height="64"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="64" height="52"/>
+        <namedColor name="componentsWLbl">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -10,9 +10,10 @@ import UIKit
 import SkeletonView
 import SDWebImage
 import AnimatedCollectionViewLayout
+//import APNGImageSerialization
 
-class Recommendation: UIViewController, PlayerVCDelegate {
-    
+class RecommendationT: UIViewController, PlayerVCDelegate {
+ 
     @IBOutlet weak var collView: UICollectionView!
     @IBOutlet weak var searchTab: UIView!
     @IBOutlet weak var searchView: UISearchBar!
@@ -180,11 +181,10 @@ class Recommendation: UIViewController, PlayerVCDelegate {
     
 }
 
-extension Recommendation: SkeletonCollectionViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension RecommendationT: SkeletonCollectionViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "CellIdentifier"
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -201,7 +201,7 @@ extension Recommendation: SkeletonCollectionViewDataSource, UICollectionViewData
             
             return cell
         }
-        
+
         let videoTitle = videos[indexPath.row].videoTitle
         let ChannelTitle = videos[indexPath.row].videoChannelName
         let videoUrlString = videos[indexPath.row].videoThumbnailUrl
@@ -252,7 +252,7 @@ extension Recommendation: SkeletonCollectionViewDataSource, UICollectionViewData
 
 }
 
-extension Recommendation: UISearchBarDelegate {
+extension RecommendationT: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         
@@ -264,9 +264,10 @@ extension Recommendation: UISearchBarDelegate {
     }
 }
 
-extension Recommendation: VideoModelDelegate {
+extension RecommendationT: VideoModelDelegate {
     func dataReady() {
         self.videos = self.videoModel.videoArray
+        videos.shuffle()
         self.collView.reloadData()
         videoArrayComplete = true
     }

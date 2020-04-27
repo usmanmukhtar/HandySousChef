@@ -1,10 +1,14 @@
 PODS:
   - Alamofire (4.9.0)
   - AnimatedCollectionViewLayout (1.0.1)
+  - FLAnimatedImage (1.0.12)
   - IQKeyboardManagerSwift (6.5.5)
   - SDWebImage (5.6.1):
     - SDWebImage/Core (= 5.6.1)
   - SDWebImage/Core (5.6.1)
+  - SDWebImageFLPlugin (0.4.0):
+    - FLAnimatedImage (>= 1.0.11)
+    - SDWebImage/Core (~> 5.6)
   - SkeletonView (1.8.7)
   - YoutubePlayer-in-WKWebView (0.2.5)
 
@@ -13,6 +17,7 @@ DEPENDENCIES:
   - AnimatedCollectionViewLayout
   - IQKeyboardManagerSwift
   - SDWebImage (~> 5.0)
+  - SDWebImageFLPlugin
   - SkeletonView
   - YoutubePlayer-in-WKWebView (~> 0.2.0)
 
@@ -20,19 +25,23 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AnimatedCollectionViewLayout
+    - FLAnimatedImage
     - IQKeyboardManagerSwift
     - SDWebImage
+    - SDWebImageFLPlugin
     - SkeletonView
     - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   AnimatedCollectionViewLayout: 00f0997fd26f0fd02d8b99765023b95570b5d826
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
+  SDWebImageFLPlugin: 6c2295fb1242d44467c6c87dc5db6b0a13228fd8
   SkeletonView: ba5370f41280b2f0a76918bb143c1294232bb4f4
   YoutubePlayer-in-WKWebView: 4dad12b3ece938a6456fa4374df78942f88b485a
 
-PODFILE CHECKSUM: 065b4acb8aac1c7dad4040507b2a24c80aa30b7a
+PODFILE CHECKSUM: 51e0995eb2f48fb78d82a8f9b461f1ebe38c0877
 
 COCOAPODS: 1.8.4

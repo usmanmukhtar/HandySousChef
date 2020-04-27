@@ -42,6 +42,8 @@ class PlayerView: UIView, UIGestureRecognizerDelegate {
     var state = stateOfVC.hidden
     var direction = Direction.none
     
+    let rootViewController = (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController
+    
     //MARK: Methods
     func customization() {
         self.backgroundColor = UIColor.clear

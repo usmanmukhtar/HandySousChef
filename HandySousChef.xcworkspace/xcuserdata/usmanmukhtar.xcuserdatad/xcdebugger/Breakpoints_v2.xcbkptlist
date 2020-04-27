@@ -7,95 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE"
-            shouldBeEnabled = "Yes"
+            uuid = "A55008CA-6A43-473C-BB59-35A1466CAC44"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HandySousChef/Scenes/Recommendation/Recommendation.swift"
+            filePath = "HandySousChef/Scenes/VideoLauncher/VideoLauncher.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE - b782195f247c0461"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HandySousChef.Recommendation.customization() -&gt; ()"
-                  moduleName = "HandySousChef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/usmanmukhtar/Desktop/git%20clones/HandySousChef/HandySousChef/Scenes/Recommendation/Recommendation.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE - b782195f247c0461"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HandySousChef.Recommendation.customization() -&gt; ()"
-                  moduleName = "HandySousChef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/usmanmukhtar/Desktop/git%20clones/HandySousChef/HandySousChef/Scenes/Recommendation/Recommendation.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE - b782195f247c0461"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HandySousChef.Recommendation.customization() -&gt; ()"
-                  moduleName = "HandySousChef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/usmanmukhtar/Desktop/git%20clones/HandySousChef/HandySousChef/Scenes/Recommendation/Recommendation.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "224">
-               </Location>
-               <Location
-                  uuid = "74EBC6F0-3FB7-4135-8E7F-0452359890BE - b782195f247c0461"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HandySousChef.Recommendation.customization() -&gt; ()"
-                  moduleName = "HandySousChef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/usmanmukhtar/Desktop/git%20clones/HandySousChef/HandySousChef/Scenes/Recommendation/Recommendation.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "304">
-               </Location>
-            </Locations>
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "tapPlayView(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1DBEFEA0-CDA4-4B20-BCF4-3F9C2CB259CB"
+            uuid = "5747A07C-5863-4BCB-8945-39D44B79598B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HandySousChef/Scenes/Recommendation/Recommendation.swift"
+            filePath = "HandySousChef/Scenes/Recommendation/RecommendationCell/DessertTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

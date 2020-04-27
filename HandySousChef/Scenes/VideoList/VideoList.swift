@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SDWebImage
+import SDWebImageFLPlugin
 import SkeletonView
 
 class VideoList: UIViewController, VideoModelDelegate {
@@ -64,19 +65,18 @@ extension VideoList: UITableViewDelegate, SkeletonTableViewDataSource {
         
         let videoTitle = videos[indexPath.row].videoTitle
         let label = cell.viewWithTag(2) as! UILabel
-        label.showAnimatedGradientSkeleton()
+//        label.showAnimatedGradientSkeleton()
         
         
         let videoUrlString = videos[indexPath.row].videoThumbnailUrl
         
         let url = URL(string: videoUrlString)!
         let imageView = cell.viewWithTag(1) as! UIImageView
-        imageView.showAnimatedGradientSkeleton()
 
         if self.videoArrayComplete {
             cell.hideSkeleton()
             label.text = videoTitle
-            imageView.sd_setImage(with: url, placeholderImage: nil, options: [.progressiveLoad, .continueInBackground])
+            imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "loading"), options: [.progressiveLoad, .continueInBackground])
         }
 
         return cell

@@ -8,14 +8,14 @@
 
 import Foundation
 import UIKit
+import IQKeyboardManagerSwift
 
 extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     
     func setupUI(){
         self.Notes.dataSource = self
         self.Notes.delegate = self
-        steps.append(Steps(name: ""))
-        ingredients.append(Ingredients(name: ""))
+        self.Notes.separatorStyle = .none
         registerTVC()
     }
     
@@ -33,11 +33,10 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section {
         case 0:
-            return 100
+            return 70
         default:
             return 40
         }
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,8 +44,9 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let frame = tableView.frame
         let view = UIView()
-        view.backgroundColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
+        view.backgroundColor = UIColor(named: "primary-color")
         
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 16)
@@ -59,6 +59,7 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         switch section {
         case 0:
             let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "NotesHeader") as! NotesHeader
+            headerView.btnshare.addTarget(self, action: #selector(onbtnHeader(_:)), for: .touchUpInside)
             return headerView
         case 1:
             title.text = "Ingredients"
@@ -67,6 +68,14 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         default:
             title.text = ""
         }
+
+        let button = UIButton(frame: CGRect(x: frame.size.width - 40, y: 0, width: 40, height: 40))
+        button.tag = section
+        button.addTarget(self, action: #selector(onbtnAdd(_:)), for: .touchUpInside)
+        button.setImage(UIImage(systemName: "plus.app.fill"), for: UIControl.State.normal)
+        button.tintColor = .white
+        view.addSubview(button)
+        
         return view
     }
     
@@ -85,29 +94,26 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath) as! NotesCell
-        cell.cellDelegate = self
-//        if indexPath.section == 1 {
-//            if cell.textViewNotes.text != ingredients[indexPath.row].name {
-//                ingredients[indexPath.row].name = cell.textViewNotes.text
-//            }
-//        } else if indexPath.section == 2 {
-//            if cell.textViewNotes.text != steps[indexPath.row].name {
-//                ingredients[indexPath.row].name = cell.textViewNotes.text
-//            }
-//        }
-        
+
         cell.textViewNotes.text = (indexPath.section == 1 ? ingredients[indexPath.row].name : (indexPath.section == 2 ? steps[indexPath.row].name : ""))
-        
-        let lastRowIndex = tableView.numberOfRows(inSection: indexPath.section) - 1 // last row
-        if lastRowIndex == indexPath.row {
-            cell.btnAdd.alpha = 1
-            cell.btnAdd.tag = indexPath.section
-            cell.btnAdd.addTarget(self, action: #selector(onbtnAdd), for: .touchUpInside)
-        }else{
-            cell.btnAdd.alpha = 0
+        if indexPath.section == 1 {
+            if ingredients[indexPath.row].checked {
+                cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxFILLED"), for: UIControl.State.normal)
+            }else{
+                cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxOUTLINE"), for: UIControl.State.normal)
+            }
+        }
+        else if indexPath.section == 2{
+            if steps[indexPath.row].checked {
+                cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxFILLED"), for: UIControl.State.normal)
+            }else{
+                cell.btnCheck.setBackgroundImage(UIImage(named: "checkBoxOUTLINE"), for: UIControl.State.normal)
+            }
+            
         }
         
-        cell.indexPath = indexPath.row
+        cell.delegate = self
+        cell.indexP = indexPath.row
         cell.section = indexPath.section
         cell.steps = steps
         cell.ingredients = ingredients
@@ -127,28 +133,55 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    @objc func onbtnAdd(_ sender: UIButton){
-        insertNewRow(section: sender.tag)
+    @objc func onbtnHeader(_ sender: UIButton){
+        var shareContent: String = "Ingredients: \n"
+        for (ingredient) in ingredients {
+            if ingredient.checked {
+                shareContent.append(contentsOf: "- \(ingredient.name) \n")
+            }
+        }
+        
+        print(shareContent)
+        let activityController = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
+        rootViewController?.present(activityController, animated: true, completion: nil)
     }
     
-    func insertNewRow(section: Int) {
+    @objc func onbtnAdd(_ sender: UIButton){
+        let ac = UIAlertController(title: "Enter Notes", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+
+        let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac] _ in
+            let answer = ac.textFields![0]
+            self.insertNewRow(section: sender.tag, answer: answer.text ?? "")
+        }
+
+        ac.addAction(submitAction)
+        
+        rootViewController?.present(ac, animated: true)
+        
+    }
+    
+    func insertNewRow(section: Int, answer: String) {
         var count = 0
         
         if section == 1 {
-            ingredients.append(Ingredients(name: ""))
+            ingredients.append(Ingredients(name: answer))
             count = ingredients.count
         }else if section == 2 {
-            steps.append(Steps(name: ""))
+            steps.append(Steps(name: answer))
             count = steps.count
         }
         
-        var indexPath = IndexPath(row: (count - 1), section: section)
+        let indexPath = IndexPath(row: (count - 1), section: section)
         Notes.beginUpdates()
         Notes.insertRows(at: [indexPath], with: .left)
         Notes.endUpdates()
-        indexPath.row -= 1
-        Notes.reloadRows(at: [(indexPath)], with: .left)
         self.scrollToBottom(indexPath)
+        
+        if Notes.visibleCells.count < 2 {
+            let cell = Notes.visibleCells[0] as! NotesCell
+            cell.animateSwipeHint()
+        }
         
     }
     
@@ -164,13 +197,6 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
         Notes.beginUpdates()
         Notes.deleteRows(at: [indexPath], with: .right)
         Notes.endUpdates()
-        
-        if ingredients.isEmpty {
-            insertNewRow(section: 1)
-        }
-        else if steps.isEmpty {
-            insertNewRow(section: 2)
-        }
     }
     
     func scrollToBottom(_ indexPath: IndexPath)
@@ -182,27 +208,15 @@ extension PlayerView: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension PlayerView: GrowingCellProtocol {
-    func updateHeightOfRow(_ cell: NotesCell, _ textView: UITextView) {
-        let size = textView.bounds.size
-        let newSize = Notes.sizeThatFits(CGSize(width: size.width, height: CGFloat.greatestFiniteMagnitude))
-        if size.height != newSize.height {
-            UIView.setAnimationsEnabled(false)
-            Notes?.beginUpdates()
-            Notes?.endUpdates()
-            UIView.setAnimationsEnabled(true)
-            if let thisIndexPath = Notes.indexPath(for: cell) {
-                Notes.scrollToRow(at: thisIndexPath, at: .bottom, animated: false)
-            }
-        }
-    }
-    
-    func onbtnCheckbox(checked: Bool, index: Int, section: Int) {
+extension PlayerView: ChangeBtnCheck {
+    func changebtnCheck(checked: Bool, index: Int, section: Int) {
+        
         if section == 1 {
             ingredients[index].checked = checked
-        } else if section == 2 {
+        }else if section == 2 {
             steps[index].checked = checked
         }
+        
         Notes.reloadData()
     }
 }

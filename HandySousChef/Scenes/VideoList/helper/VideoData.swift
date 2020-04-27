@@ -15,5 +15,6 @@ class VideoData: NSObject {
     var videoThumbnailUrl:String = ""
     var videoChannelName: String = ""
     var videoChannelId: String = ""
+    var videoDesc: String = ""
 }
 
