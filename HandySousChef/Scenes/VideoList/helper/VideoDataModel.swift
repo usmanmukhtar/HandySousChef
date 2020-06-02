@@ -21,7 +21,7 @@ class VideoDataModel: NSObject {
         "part": "snippet",
         "type": "video",
         "videoEmbeddable": "true",
-        "key": "AIzaSyD-NDfLv4j2RgGVl9ZE7f9SwQWGL0QlW7Q",
+        "key": "Your API Key",
     ]
     
     var videoArray = [VideoData]()
